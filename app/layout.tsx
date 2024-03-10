@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import SmoothLayout from "./_components/smoothLayout";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +17,9 @@ export default function RootLayout({
       <head>
         <script src="https://dl.dropboxusercontent.com/s/f62j9uzlmzp1bnu/ScrollSmoother.min.js?raw=1"></script>
       </head>
-      <body>{children}</body>
+      <body>
+        <SmoothLayout>{children}</SmoothLayout>
+      </body>
     </html>
   );
 }

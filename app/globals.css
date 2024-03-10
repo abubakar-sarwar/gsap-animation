@@ -1,3 +1,66 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.banner_card {
+  position: absolute;
+}
+
+.banner_card--1 {
+  left: 6.09%;
+  top: 8.61%;
+  width: 13.48%;
+}
+
+.banner_card--2 {
+  left: 8.59%;
+  top: 62.03%;
+  width: 17.08%;
+}
+
+.banner_card--3 {
+  left: 30.78%;
+  top: 0;
+  width: 14.58%;
+}
+
+.banner_card--4 {
+  left: 33.02%;
+  top: 69.53%;
+  width: 11.97%;
+}
+
+.banner_card--5 {
+  left: 54.89%;
+  top: 73.61%;
+  width: 14.58%;
+}
+
+.banner_card--6 {
+  left: 69.21%;
+  top: 33.79%;
+  width: 15.26%;
+}
+
+.banner_card--7 {
+  left: 88.48%;
+  top: 81.57%;
+  width: 13.43%;
+}
+
+.banner_card--8 {
+  left: 92%;
+  top: 39.44%;
+  width: 14.58%;
+}
+
+.banner_card--9 {
+  left: 55%;
+  top: 5%;
+  width: 14.58%;
+}
+
+.banner_card img {
+  aspect-ratio: 9/13;
+  object-fit: cover;
+}
