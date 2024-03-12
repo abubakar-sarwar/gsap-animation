@@ -2,6 +2,104 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Montreal";
+  src: url("/fonts/Montreal/Montreal-Thin.otf"),
+    url("/fonts/Montreal/Montreal-Thin.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montreal";
+  src: url("/fonts/Montreal/Montreal-Regular.otf"),
+    url("/fonts/Montreal/Montreal-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montreal";
+  src: url("/fonts/Montreal/Montreal-Medium.otf"),
+    url("/fonts/Montreal/Montreal-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montreal";
+  src: url("/fonts/Montreal/Montreal-Bold.otf"),
+    url("/fonts/Montreal/Montreal-Bold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Khand";
+  src: url("/fonts/Khand-Light.woff2") format("woff2"),
+    url("/fonts/Khand-Light.woff") format("woff"),
+    url("/fonts/Khand-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Khand";
+  src: url("/fonts/Khand-Regular.woff2") format("woff2"),
+    url("/fonts/Khand-Regular.woff") format("woff"),
+    url("/fonts/Khand-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Khand";
+  src: url("/fonts/Khand-Medium.woff2") format("woff2"),
+    url("/fonts/Khand-Medium.woff") format("woff"),
+    url("/fonts/Khand-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Khand";
+  src: url("/fonts/Khand-SemiBold.woff2") format("woff2"),
+    url("/fonts/Khand-SemiBold.woff") format("woff"),
+    url("/fonts/Khand-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Khand";
+  src: url("/fonts/Khand-Bold.woff2") format("woff2"),
+    url("/fonts/Khand-Bold.woff") format("woff"),
+    url("/fonts/Khand-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+body {
+  font-family: Montreal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Khand;
+}
+
+h1 {
+  font-size: 105px;
+}
+
 .banner_card {
   position: absolute;
 }
@@ -63,4 +161,27 @@
 .banner_card img {
   aspect-ratio: 9/13;
   object-fit: cover;
+}
+
+.customTextBG {
+  mix-blend-mode: difference;
+  mask: url;
+}
+
+.mix-blend-text {
+  mix-blend-mode: screen;
+}
+
+.clipped-video {
+  -webkit-clip-path: url(#text-overlay);
+  clip-path: url(#text-overlay);
+}
+svg#text_Header {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-family: Khand;
+  font-size: 100px;
+  font-weight: bolder;
 }

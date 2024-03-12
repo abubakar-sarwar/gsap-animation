@@ -17,7 +17,7 @@ export default function RootLayout({
       <head>
         <script src="https://dl.dropboxusercontent.com/s/f62j9uzlmzp1bnu/ScrollSmoother.min.js?raw=1"></script>
       </head>
-      <body>
+      <body className="dark:bg-[#080808]">
         <SmoothLayout>{children}</SmoothLayout>
       </body>
     </html>
