@@ -43,6 +43,7 @@ const PreLoader = () => {
     const counter3 = loader?.querySelector(".counter-3") as HTMLElement;
 
     const tl = gsap.timeline({
+      id: "preloader",
       onUpdate: function () {
         const bar1Width = gsap.getProperty(".bar_1", "width") as number;
         const bar2Width = gsap.getProperty(".bar_2", "width") as number;

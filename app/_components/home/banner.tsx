@@ -61,47 +61,59 @@ const Banner = () => {
     },
   ];
 
-  useGSAP((context) => {
-    console.log(context);
+  useGSAP(() => {
+    const tl = gsap.getById("preloader");
 
-    document.querySelectorAll(".banner_grid_cards").forEach((item, index) => {
-      gsap.to(item, {
+    if (tl) {
+      if (tl.progress() === 1) {
+        runAnimations();
+      } else {
+        tl.eventCallback("onComplete", () => {
+          runAnimations();
+        });
+      }
+    }
+
+    function runAnimations() {
+      document.querySelectorAll(".banner_grid_cards").forEach((item, index) => {
+        gsap.to(item, {
+          translateX: 0,
+          translateY: 0,
+          scaleX: 1,
+          scaleY: 1,
+          opacity: 1,
+          duration: 1,
+        });
+      });
+
+      document.addEventListener("mousemove", (e) => {
+        document.querySelectorAll(".banner_card").forEach((item, index) => {
+          const animationFactor = items[index].parallaxSpeed;
+
+          const deltaX = (e.clientX - window.innerWidth / 2) * animationFactor;
+          const deltaY = (e.clientY - window.innerHeight / 2) * animationFactor;
+
+          gsap.to(item, { x: deltaX, y: deltaY, scale: 1, duration: 0.6 });
+        });
+
+        document.querySelectorAll(".banner_video").forEach((item, index) => {
+          const animationFactor = 0.16;
+
+          const deltaX = (e.clientX - window.innerWidth / 2) * animationFactor;
+          const deltaY = (e.clientY - window.innerHeight / 2) * animationFactor;
+
+          gsap.to(item, { x: deltaX, y: deltaY, scale: 1, duration: 0.6 });
+        });
+      });
+
+      gsap.to(".banner_video", {
         translateX: 0,
         translateY: 0,
-        scaleX: 1,
-        scaleY: 1,
+        scale: 1,
         opacity: 1,
         duration: 1,
       });
-    });
-
-    document.addEventListener("mousemove", (e) => {
-      document.querySelectorAll(".banner_card").forEach((item, index) => {
-        const animationFactor = items[index].parallaxSpeed;
-
-        const deltaX = (e.clientX - window.innerWidth / 2) * animationFactor;
-        const deltaY = (e.clientY - window.innerHeight / 2) * animationFactor;
-
-        gsap.to(item, { x: deltaX, y: deltaY, scale: 1, duration: 0.6 });
-      });
-
-      document.querySelectorAll(".banner_video").forEach((item, index) => {
-        const animationFactor = 0.16;
-
-        const deltaX = (e.clientX - window.innerWidth / 2) * animationFactor;
-        const deltaY = (e.clientY - window.innerHeight / 2) * animationFactor;
-
-        gsap.to(item, { x: deltaX, y: deltaY, scale: 1, duration: 0.6 });
-      });
-    });
-
-    gsap.to(".banner_video", {
-      translateX: 0,
-      translateY: 0,
-      scale: 1,
-      opacity: 1,
-      duration: 1,
-    });
+    }
   });
 
   return (
