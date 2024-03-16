@@ -61,7 +61,9 @@ const Banner = () => {
     },
   ];
 
-  useGSAP(() => {
+  useGSAP((context) => {
+    console.log(context);
+
     document.querySelectorAll(".banner_grid_cards").forEach((item, index) => {
       gsap.to(item, {
         translateX: 0,

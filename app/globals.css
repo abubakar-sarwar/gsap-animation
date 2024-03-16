@@ -212,10 +212,15 @@ h1 {
   height: clamp(100px, 67vw, 600px);
   overflow: hidden;
   font-weight: bolder;
-  opacity: 0.03;
+  color: black;
+  opacity: 0.3;
 }
 
 #loader .loading_text {
   font-size: clamp(100px, 67vw, 200px);
   line-height: 1;
+}
+
+#loader .bar {
+  @apply flex w-[300px] h-[50px] absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 bg-white;
 }
