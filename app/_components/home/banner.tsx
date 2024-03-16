@@ -2,6 +2,7 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import Image from "next/image";
+import { useRef } from "react";
 
 const Banner = () => {
   const items = [
@@ -61,63 +62,76 @@ const Banner = () => {
     },
   ];
 
-  useGSAP(() => {
-    const tl = gsap.getById("preloader");
+  const container = useRef(null);
 
-    if (tl) {
-      if (tl.progress() === 1) {
-        runAnimations();
-      } else {
-        tl.eventCallback("onComplete", () => {
+  useGSAP(
+    () => {
+      const tl = gsap.getById("preloader");
+
+      if (tl) {
+        if (tl.progress() === 1) {
           runAnimations();
-        });
+        } else {
+          tl.eventCallback("onComplete", () => {
+            runAnimations();
+          });
+        }
       }
-    }
 
-    function runAnimations() {
-      document.querySelectorAll(".banner_grid_cards").forEach((item, index) => {
-        gsap.to(item, {
-          translateX: 0,
-          translateY: 0,
-          scaleX: 1,
-          scaleY: 1,
-          opacity: 1,
-          duration: 1,
-        });
-      });
+      function runAnimations() {
+        document
+          .querySelectorAll(".banner_grid_cards")
+          .forEach((item, index) => {
+            gsap.to(item, {
+              translateX: 0,
+              translateY: 0,
+              scaleX: 1,
+              scaleY: 1,
+              opacity: 1,
+              duration: 1,
+            });
+          });
+        const video = document.getElementById("banner_video");
 
-      document.addEventListener("mousemove", (e) => {
-        document.querySelectorAll(".banner_card").forEach((item, index) => {
-          const animationFactor = items[index].parallaxSpeed;
+        document.addEventListener("mousemove", (e) => {
+          document.querySelectorAll(".banner_card").forEach((item, index) => {
+            const animationFactor = items[index].parallaxSpeed;
 
-          const deltaX = (e.clientX - window.innerWidth / 2) * animationFactor;
-          const deltaY = (e.clientY - window.innerHeight / 2) * animationFactor;
+            const deltaX =
+              (e.clientX - window.innerWidth / 2) * animationFactor;
+            const deltaY =
+              (e.clientY - window.innerHeight / 2) * animationFactor;
 
-          gsap.to(item, { x: deltaX, y: deltaY, scale: 1, duration: 0.6 });
-        });
+            gsap.to(item, { x: deltaX, y: deltaY, scale: 1, duration: 0.6 });
+          });
 
-        document.querySelectorAll(".banner_video").forEach((item, index) => {
           const animationFactor = 0.16;
 
           const deltaX = (e.clientX - window.innerWidth / 2) * animationFactor;
           const deltaY = (e.clientY - window.innerHeight / 2) * animationFactor;
 
-          gsap.to(item, { x: deltaX, y: deltaY, scale: 1, duration: 0.6 });
+          gsap.to(video, {
+            x: deltaX,
+            y: deltaY,
+            scale: 1,
+            duration: 0.6,
+          });
         });
-      });
 
-      gsap.to(".banner_video", {
-        translateX: 0,
-        translateY: 0,
-        scale: 1,
-        opacity: 1,
-        duration: 1,
-      });
-    }
-  });
+        gsap.to(video, {
+          translateX: 0,
+          translateY: 0,
+          scale: 1,
+          opacity: 1,
+          duration: 1,
+        });
+      }
+    },
+    { scope: container }
+  );
 
   return (
-    <section className="h-screen min-h-[600px] relative">
+    <section ref={container} className="h-screen min-h-[600px] relative">
       <div className="absolute w-[80%] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
         <div className="relative flex">
           <video
@@ -130,6 +144,7 @@ const Banner = () => {
               transform: `translate(-10rem, 5rem) scale(0.3, 0.3)`,
               opacity: 0,
             }}
+            id="banner_video"
             className="absolute -top-[35%] right-5 z-10 w-[40%] object-cover banner_video"
           ></video>
           <h1
