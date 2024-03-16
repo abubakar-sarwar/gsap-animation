@@ -83,32 +83,26 @@
   font-style: normal;
 }
 
-::-webkit-scrollbar {
-  width: 0.625rem;
-  border: 5px solid white;
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #686868 #424242;
 }
 
-::-webkit-scrollbar-thumb {
-  background-color: #b0b0b0;
-  background-clip: padding-box;
-  border: 0.05em solid #eeeeee;
-}
-
-::-webkit-scrollbar-track {
-  background-color: #bbbbbb;
-}
-/* Buttons */
-::-webkit-scrollbar-button:single-button {
-  background-color: #bbbbbb;
-  display: block;
-  border-style: solid;
-  height: 13px;
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
   width: 16px;
 }
-/* Up */
-::-webkit-scrollbar-button:single-button:vertical:decrement {
-  border-width: 0 4px 4px 4px;
-  border-color: transparent transparent black transparent;
+
+*::-webkit-scrollbar-track {
+  background: #424242;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #686868;
+  border-radius: 10px;
+  border: 11px solid #ffffff;
 }
 
 body {
