@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import SmoothLayout from "./_components/smoothLayout";
 import { PreLoader } from "./_components";
+import SmoothLayout from "./_components/smoothLayout";
 
 export const metadata: Metadata = {
   title: "Create Next App",

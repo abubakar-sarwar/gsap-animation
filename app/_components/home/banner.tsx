@@ -131,7 +131,10 @@ const Banner = () => {
   );
 
   return (
-    <section ref={container} className="h-screen min-h-[600px] relative">
+    <section
+      ref={container}
+      className="h-screen min-h-[600px] mb-[100px] relative"
+    >
       <div className="absolute w-[80%] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
         <div className="relative flex">
           <video
@@ -152,18 +155,18 @@ const Banner = () => {
             data-speed="1"
             className="absolute inset-0 font-bold text-center leading-[110px] uppercase banner_text text-white"
           >
-            EMBARK ON WILD ADVENTURES WITH US
+            EMBARK ON WILD <br /> ADVENTURES WITH US
           </h1>
           <h1
             data-lag="0.1"
             data-speed="1"
             className="w-full font-bold text-center z-20 leading-[110px] uppercase outlineText banner_text text-white"
           >
-            EMBARK ON WILD ADVENTURES WITH US
+            EMBARK ON WILD <br /> ADVENTURES WITH US
           </h1>
         </div>
       </div>
-      <div className="absolute inset-0 overflow-hidden">
+      <div className="absolute inset-0">
         {items?.map((item, index) => (
           <div
             style={{

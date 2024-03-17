@@ -8,8 +8,19 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      container: {
+        center: true,
+        padding: "30px",
+      },
       colors: {
         "drak-body": "#080808",
+      },
+      screens: {
+        sm: "100%",
+        md: "100%",
+        lg: "100%",
+        xl: "100%",
+        "2xl": "1920px",
       },
     },
   },

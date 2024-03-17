@@ -107,6 +107,7 @@
 
 body {
   font-family: Montreal;
+  color: #ffffff;
 }
 
 h1,
@@ -217,4 +218,12 @@ h1 {
 
 #loader .bar {
   @apply flex w-[300px] h-[50px] absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 bg-white;
+}
+
+.about_text {
+  @apply font-bold text-[100px] leading-[90px] uppercase;
+}
+
+.aspect_portrate {
+  aspect-ratio: 9 / 14;
 }
