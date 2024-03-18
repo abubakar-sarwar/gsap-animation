@@ -220,10 +220,59 @@ h1 {
   @apply flex w-[300px] h-[50px] absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 bg-white;
 }
 
-.about_text {
-  @apply font-bold text-[100px] leading-[90px] uppercase;
+.about_text,
+.letsjourney_text {
+  @apply font-bold uppercase;
+
+  font-size: clamp(35px, 10vw, 100px);
+  line-height: clamp(35px, 10vw, 90px);
+}
+
+.third_heading {
+  @apply font-bold uppercase;
+
+  font-size: clamp(35px, 10vw, 70px);
+  line-height: clamp(35px, 10vw, 60px);
+}
+
+.about_text_media {
+  height: clamp(20px, 8vw, 71px);
 }
 
 .aspect_portrate {
   aspect-ratio: 9 / 14;
+}
+
+.letsJoury_IMG {
+  clip-path: polygon(37.5% 20%, 62.5% 20%, 62.5% 80%, 37.5% 80%);
+}
+
+.history_grid {
+  display: grid;
+  column-gap: 2rem;
+  grid-area: 1 / 1 / 2 / 17;
+  grid-template-columns: repeat(16, 1fr);
+}
+
+.history_grid-item:nth-child(1) {
+  grid-area: 2 / 3 / 2 / 8;
+}
+
+.history_grid-item:nth-child(2) {
+  grid-area: 2 / 10 / 3 / 15;
+  margin-top: 13rem;
+}
+
+.history_grid-item:nth-child(3) {
+  grid-area: 3 / 2 / 4 / 7;
+}
+
+.history_grid-item:nth-child(4) {
+  grid-area: 3 / 8 / 4 / 14;
+  margin-top: 13rem;
+}
+
+.history_grid-item .history_grid-text {
+  font-size: clamp(35px, 10vw, 35px);
+  line-height: clamp(35px, 10vw, 35px);
 }

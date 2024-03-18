@@ -9,13 +9,7 @@ const SmoothLayout = ({
   children: React.ReactNode;
 }>) => {
   useGSAP(() => {
-    gsap.registerPlugin(ScrollToPlugin, ScrollTrigger, ScrollSmoother);
-
-    ScrollSmoother.create({
-      smooth: 1,
-      effects: true,
-      smoothTouch: 0.1,
-    });
+    gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
   });
 
   return (

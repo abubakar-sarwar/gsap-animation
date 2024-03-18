@@ -1,8 +1,8 @@
 "use client";
-import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-import Image from "next/image";
 import { useRef } from "react";
+import Image from "next/image";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
 const AboutSection = () => {
   const group1 = ["FROM", "THRILLING"];
@@ -32,7 +32,7 @@ const AboutSection = () => {
   return (
     <div ref={container} className="container py-[150px]">
       <div className="relative trigger_anim">
-        <h1 className="flex items-center gap-3">
+        <h1 className="flex flex-wrap items-center gap-x-3">
           {group1?.map((item) => (
             <span key={item} className="about_text">
               {item.split("")?.map((text, index) => (
@@ -48,7 +48,7 @@ const AboutSection = () => {
             loop
             muted
             preload="none"
-            className="h-[71px] -mt-[3px] aspect-video about_text"
+            className="h-[71px] -mt-[3px] aspect-video char about_text_media"
           ></video>
           <span className="about_text">
             {"SAFARIS".split("")?.map((text, index) => (
@@ -58,7 +58,7 @@ const AboutSection = () => {
             ))}
           </span>
         </h1>
-        <h1 className="flex items-center gap-3">
+        <h1 className="flex flex-wrap items-center gap-x-3">
           {group2?.map((item) => (
             <span key={item} className="about_text">
               {item.split("")?.map((text, index) => (
@@ -69,7 +69,7 @@ const AboutSection = () => {
             </span>
           ))}
         </h1>
-        <h1 className="flex items-center gap-3">
+        <h1 className="flex flex-wrap items-center gap-x-3">
           {group3?.map((item) => (
             <span key={item} className="about_text">
               {item.split("")?.map((text, index) => (
@@ -84,7 +84,7 @@ const AboutSection = () => {
             alt="wild"
             width={100}
             height={71}
-            className="aspect-video h-[71px] w-auto object-cover about_text"
+            className="aspect-video h-[71px] -mt-[3px] w-auto object-cover char about_text_media"
           />
           <span className="about_text">
             {"WILD".split("")?.map((text, index) => (

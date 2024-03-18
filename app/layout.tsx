@@ -19,7 +19,7 @@ export default function RootLayout({
         <script src="https://dl.dropboxusercontent.com/s/f62j9uzlmzp1bnu/ScrollSmoother.min.js?raw=1"></script>
       </head>
       <body className="bg-drak-body">
-        <PreLoader />
+        {/* <PreLoader /> */}
         <SmoothLayout>{children}</SmoothLayout>
       </body>
     </html>
