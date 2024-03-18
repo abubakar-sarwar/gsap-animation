@@ -2,89 +2,95 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import Image from "next/image";
+import { useRef } from "react";
 
 const LetsJourney = () => {
-  useGSAP(() => {
-    gsap.to(".letsjourney_text:first-child", {
-      x: () => -innerWidth * 3,
-      scale: 10,
-      ease: "power2.inOut",
-      scrollTrigger: {
-        trigger: ".letsJourny_sec",
-        start: "top top",
-        scrub: true,
-      },
-    });
-    gsap.to(".letsjourney_text:last-child", {
-      x: () => innerWidth * 3,
-      scale: 10,
-      ease: "power2.inOut",
-      scrollTrigger: {
-        trigger: ".letsJourny_sec",
-        start: "top top",
-        scrub: true,
-      },
-    });
-    gsap.to(".letsJoury_IMG", {
-      rotate: 0,
-      clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-      ease: "power2.inOut",
-      scrollTrigger: {
-        trigger: ".letsJourny_sec",
-        start: "top top",
-        scrub: true,
-        pin: true,
-      },
-    });
+  const container = useRef<HTMLDivElement | null>(null);
 
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".history_grid",
-        start: "top 80%",
-        end: "bottom top",
-        markers: true,
-        scrub: true,
-      },
-    });
+  useGSAP(
+    () => {
+      gsap.to(".letsjourney_text:first-child", {
+        x: () => -innerWidth * 3,
+        scale: 10,
+        ease: "power2.inOut",
+        scrollTrigger: {
+          trigger: ".letsJourny_sec",
+          start: "top top",
+          scrub: true,
+        },
+      });
+      gsap.to(".letsjourney_text:last-child", {
+        x: () => innerWidth * 3,
+        scale: 10,
+        ease: "power2.inOut",
+        scrollTrigger: {
+          trigger: ".letsJourny_sec",
+          start: "top top",
+          scrub: true,
+        },
+      });
+      gsap.to(".letsJoury_IMG", {
+        rotate: 0,
+        clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+        ease: "power2.inOut",
+        scrollTrigger: {
+          trigger: ".letsJourny_sec",
+          start: "top top",
+          scrub: true,
+          pin: true,
+        },
+      });
 
-    const itemsB = document.querySelectorAll(".item_toBottom");
-    const itemsT = document.querySelectorAll(".item_toTop");
-    const images = document.querySelectorAll(".history_grid-item img");
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".history_grid",
+          start: "top 80%",
+          end: "bottom top",
+          markers: true,
+          scrub: true,
+        },
+      });
 
-    itemsB.forEach((item) => {
-      tl.to(
-        item,
-        {
-          yPercent: 10,
-          ease: "power2.inOut",
-        },
-        0
-      );
-    });
-    itemsT.forEach((item) => {
-      tl.to(
-        item,
-        {
-          yPercent: -10,
-          ease: "power2.inOut",
-        },
-        0
-      );
-    });
-    images.forEach((img) => {
-      tl.to(
-        img,
-        {
-          bottom: 0,
-          ease: "power2.inOut",
-        },
-        0
-      );
-    });
-  });
+      const itemsB = document.querySelectorAll(".item_toBottom");
+      const itemsT = document.querySelectorAll(".item_toTop");
+      const images = document.querySelectorAll(".history_grid-item img");
+
+      itemsB.forEach((item) => {
+        tl.to(
+          item,
+          {
+            yPercent: 10,
+            ease: "power2.inOut",
+          },
+          0
+        );
+      });
+      itemsT.forEach((item) => {
+        tl.to(
+          item,
+          {
+            yPercent: -10,
+            ease: "power2.inOut",
+          },
+          0
+        );
+      });
+      images.forEach((img) => {
+        tl.to(
+          img,
+          {
+            bottom: 0,
+            ease: "power2.inOut",
+          },
+          0
+        );
+      });
+    },
+    { scope: container }
+  );
 
   return (
-    <>
+    <div ref={container}>
       <div className="letsJourny_sec relative overflow-hidden">
         <div className="container">
           <div className="h-screen flex items-center justify-center">
@@ -131,9 +137,14 @@ const LetsJourney = () => {
                 data-speed="1"
                 className="mt-4 history_grid-text"
               >
-                Starlight to symphony - nature's beauty lulled you and awakened
-                you.
+                Nature's beauty, from starlight to symphony, mesmerizes.
               </h3>
+              <p className="w-[70%] text-justify text-xs mt-2.5">
+                Starlight to Symphony was a magical journey into the heart of
+                nature. The wilderness serenaded us with its beauty and wildlife
+                symphony. Unforgettable encounters and stunning landscapes made
+                it a trip of a lifetime!
+              </p>
             </div>
           </div>
           <div className="history_grid-item item_toTop translate-y-[10%]">
@@ -153,9 +164,14 @@ const LetsJourney = () => {
                 data-speed="1"
                 className="mt-4 history_grid-text"
               >
-                Lakes embraced by valleys, nature's embrace both calms and
-                invigorates.
+                Valleys cradle lakes - nature's embrace soothes and excites.
               </h3>
+              <p className="w-[70%] text-justify text-xs mt-2.5">
+                Amidst the gentle curves of valleys, serene lakes rest, cradled
+                by nature's comforting embrace. Here, tranquility and excitement
+                intertwine, offering a harmonious escape into the beauty of the
+                natural world.
+              </p>
             </div>
           </div>
           <div className="history_grid-item item_toTop translate-y-[10%]">
@@ -175,9 +191,12 @@ const LetsJourney = () => {
                 data-speed="1"
                 className="mt-4 history_grid-text"
               >
-                Starlight to symphony - nature's beauty lulled you and awakened
-                you.
+                Exploring forests light up nature's beauty.
               </h3>
+              <p className="w-[70%] text-justify text-xs mt-2.5">
+                Forest exploration, a beacon to nature's beauty, each step
+                reveals wonders, celebrating its timeless allure.
+              </p>
             </div>
           </div>
           <div className="history_grid-item item_toBottom -translate-y-[10%]">
@@ -197,14 +216,19 @@ const LetsJourney = () => {
                 data-speed="1"
                 className="mt-4 history_grid-text"
               >
-                Starlight to symphony - nature's beauty lulled you and awakened
-                you.
+                Unveiling the mesmerizing beauty of islands and the sea.
               </h3>
+              <p className="w-[70%] text-justify text-xs mt-2.5">
+                Journeying through islands and sea reveals captivating beauty:
+                pristine landscapes, serene waters, and breathtaking vistas.
+                From secluded coves to vast horizons, every moment is a
+                testament to their enduring charm
+              </p>
             </div>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
