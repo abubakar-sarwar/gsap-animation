@@ -115,7 +115,7 @@ const LetsJourney = () => {
           </div>
         </div>
       </div>
-      <div className="container relative py-10 mb-[1000px]">
+      <div className="container relative py-10">
         <h2 className="third_heading mb-10">
           Past whispers, join us to explore.
         </h2>

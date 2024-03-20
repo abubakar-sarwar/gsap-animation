@@ -1,5 +1,6 @@
 import AboutSection from "./_components/home/aboutSection";
 import Banner from "./_components/home/banner";
+import Embark from "./_components/home/embark";
 import LetsJourney from "./_components/home/letsJourney";
 
 export default function Home() {
@@ -9,6 +10,7 @@ export default function Home() {
         <Banner />
         <AboutSection />
         <LetsJourney />
+        <Embark />
       </div>
     </div>
   );
