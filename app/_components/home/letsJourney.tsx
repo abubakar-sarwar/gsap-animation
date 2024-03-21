@@ -46,7 +46,6 @@ const LetsJourney = () => {
           trigger: ".history_grid",
           start: "top 80%",
           end: "bottom top",
-          markers: true,
           scrub: true,
         },
       });
@@ -96,10 +95,10 @@ const LetsJourney = () => {
           <div className="h-screen flex items-center justify-center">
             <div className="flex">
               <h2 className="text-center uppercase letsjourney_text">
-                LET'S JOURN
+                OUR JOURN
               </h2>
               <h2 className="text-center uppercase letsjourney_text">
-                EY TOGETHER
+                EY HISTORY
               </h2>
             </div>
             <div className="absolute inset-0 z-[-1] letsJoury_IMG rotate-[30deg]">
