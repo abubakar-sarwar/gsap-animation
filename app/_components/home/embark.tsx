@@ -31,18 +31,16 @@ const Embark = () => {
 
   return (
     <section className="py-[100px]">
-      <div className="embark_BG">
-        <div className="pl-20 mb-[500px] bg-drak-body mix-blend-darken text_anim">
-          <h1 data-from-pos="50vw" data-to-pos="0" className="embark_text">
-            EMBARK
-          </h1>
-          <h1 data-from-pos="0" data-to-pos="30vw" className="embark_text">
-            ON THIS JOURNEY
-          </h1>
-          <h1 data-from-pos="40vw" data-to-pos="15vw" className="embark_text">
-            TOGETHER
-          </h1>
-        </div>
+      <div className="pl-20 mb-[500px] bg-drak-body text_anim">
+        <h1 data-from-pos="50vw" data-to-pos="0" className="embark_text">
+          EMBARK
+        </h1>
+        <h1 data-from-pos="0" data-to-pos="30vw" className="embark_text">
+          ON THIS JOURNEY
+        </h1>
+        <h1 data-from-pos="40vw" data-to-pos="15vw" className="embark_text">
+          TOGETHER
+        </h1>
       </div>
     </section>
   );
