@@ -2,35 +2,41 @@
 
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { useRef } from "react";
 
 const Embark = () => {
-  useGSAP(() => {
-    const texts = document.querySelectorAll<HTMLElement>(".embark_text");
+  const container = useRef<HTMLDivElement | null>(null);
 
-    texts.forEach((item) => {
-      const from = item.dataset.fromPos;
-      const to = item.dataset.toPos;
+  useGSAP(
+    () => {
+      const texts = document.querySelectorAll<HTMLElement>(".embark_text");
 
-      gsap.fromTo(
-        item,
-        {
-          x: from,
-        },
-        {
-          x: to,
-          scrollTrigger: {
-            trigger: ".text_anim",
-            start: "top 90%",
-            end: "bottom top",
-            scrub: true,
+      texts.forEach((item) => {
+        const from = item.dataset.fromPos;
+        const to = item.dataset.toPos;
+
+        gsap.fromTo(
+          item,
+          {
+            x: from,
           },
-        }
-      );
-    });
-  });
+          {
+            x: to,
+            scrollTrigger: {
+              trigger: ".text_anim",
+              start: "top 90%",
+              end: "bottom top",
+              scrub: true,
+            },
+          }
+        );
+      });
+    },
+    { scope: container }
+  );
 
   return (
-    <section className="py-[100px]">
+    <section className="py-[100px]" ref={container}>
       <div className="pl-20 mb-[500px] bg-drak-body text_anim">
         <h1 data-from-pos="50vw" data-to-pos="0" className="embark_text">
           EMBARK
