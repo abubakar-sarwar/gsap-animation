@@ -84,6 +84,29 @@ const LetsJourney = () => {
           0
         );
       });
+
+      const texts = document.querySelectorAll<HTMLElement>(".third_heading");
+
+      texts.forEach((item) => {
+        const from = item.dataset.fromPos;
+        const to = item.dataset.toPos;
+
+        gsap.fromTo(
+          item,
+          {
+            x: from,
+          },
+          {
+            x: to,
+            scrollTrigger: {
+              trigger: ".text_anim",
+              start: "top 90%",
+              end: "bottom top",
+              scrub: true,
+            },
+          }
+        );
+      });
     },
     { scope: container }
   );
@@ -114,8 +137,12 @@ const LetsJourney = () => {
           </div>
         </div>
       </div>
-      <div className="container relative py-10">
-        <h2 className="third_heading mb-10">
+      <div className="container relative py-10 text_anim">
+        <h2
+          data-from-pos="15vw"
+          data-to-pos="0"
+          className="third_heading mb-10"
+        >
           Past whispers, join us to explore.
         </h2>
         <div className="history_grid pt-10">

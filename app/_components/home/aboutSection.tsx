@@ -25,6 +25,24 @@ const AboutSection = () => {
           markers: false,
         },
       });
+
+      const itemsAndImages = document.querySelectorAll(
+        ".about_banner, .item_toTop"
+      );
+
+      itemsAndImages.forEach((element) => {
+        gsap.to(element, {
+          yPercent: element.classList.contains("item_toTop") ? -10 : 0,
+          bottom: element.classList.contains("about_banner") ? 0 : "auto",
+          ease: "power2.inOut",
+          scrollTrigger: {
+            trigger: ".trigger_anim",
+            start: "top 80%",
+            end: "bottom top",
+            scrub: true,
+          },
+        });
+      });
     },
     { scope: container }
   );
@@ -108,18 +126,14 @@ const AboutSection = () => {
             </div>
           ))}
         </h1>
-        <div
-          data-lag="0.3"
-          data-speed="1"
-          className="absolute top-1/2 -translate-y-1/2 right-0 z-[-1] w-1/4"
-        >
+        <div className="absolute top-1/2 h-full overflow-hidden item_toTop -translate-y-1/2 right-0 z-[-1] w-1/4">
           <Image
             src="/about_sec.jpg"
             alt="wild"
             width={100}
             height={71}
             unoptimized
-            className="h-auto w-full object-cover aspect_portrate"
+            className="absolute bottom-[-30%] w-full h-[130%] object-cover about_banner"
           />
         </div>
       </div>
