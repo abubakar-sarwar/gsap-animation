@@ -36,19 +36,39 @@ const Embark = () => {
   );
 
   return (
-    <section className="py-[100px]" ref={container}>
-      <div className="pl-20 mb-[500px] bg-drak-body text_anim">
-        <h1 data-from-pos="50vw" data-to-pos="0" className="embark_text">
-          EMBARK
-        </h1>
-        <h1 data-from-pos="0" data-to-pos="30vw" className="embark_text">
-          ON THIS JOURNEY
-        </h1>
-        <h1 data-from-pos="40vw" data-to-pos="15vw" className="embark_text">
-          TOGETHER
-        </h1>
-      </div>
-    </section>
+    <>
+      <section className="py-[100px]" ref={container}>
+        <div className="pl-20 bg-drak-body text_anim">
+          <h1 data-from-pos="50vw" data-to-pos="0" className="embark_text">
+            EMBARK
+          </h1>
+          <h1 data-from-pos="0" data-to-pos="30vw" className="embark_text">
+            ON THIS JOURNEY
+          </h1>
+          <h1 data-from-pos="40vw" data-to-pos="15vw" className="embark_text">
+            TOGETHER
+          </h1>
+        </div>
+      </section>
+      <section>
+        <div className="container">
+          <div className="h-screen">
+            <div className="flex items-center">
+              <div className="h-[20px] w-[2px] bg-white mr-5" />
+              <div className="line grow"></div>
+              <div className="h-[20px] w-[2px] bg-white mx-5" />
+              <div className="line grow"></div>
+              <div className="h-[20px] w-[2px] bg-white mx-5" />
+              <div className="line grow"></div>
+              <div className="h-[20px] w-[2px] bg-white mx-5" />
+              <div className="line grow"></div>
+              <div className="h-[20px] w-[2px] bg-white ml-5" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <div className="mb-[500px]"></div>
+    </>
   );
 };
 

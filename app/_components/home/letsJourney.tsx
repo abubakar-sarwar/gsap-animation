@@ -139,7 +139,7 @@ const LetsJourney = () => {
       </div>
       <div className="container relative py-10 text_anim">
         <h2
-          data-from-pos="15vw"
+          data-from-pos="20vw"
           data-to-pos="0"
           className="third_heading mb-10"
         >
