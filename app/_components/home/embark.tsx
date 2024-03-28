@@ -63,7 +63,6 @@ const Embark = () => {
               <div className="h-[20px] w-[2px] bg-white mx-5" />
               <div className="line grow"></div>
               <div className="h-[20px] w-[2px] bg-white ml-5" />
-              <div className="line grow"></div>
             </div>
           </div>
         </div>
