@@ -50,24 +50,6 @@ const Embark = () => {
           </h1>
         </div>
       </section>
-      <section>
-        <div className="container">
-          <div className="h-screen">
-            <div className="flex items-center">
-              <div className="h-[20px] w-[2px] bg-white mr-5" />
-              <div className="line grow"></div>
-              <div className="h-[20px] w-[2px] bg-white mx-5" />
-              <div className="line grow"></div>
-              <div className="h-[20px] w-[2px] bg-white mx-5" />
-              <div className="line grow"></div>
-              <div className="h-[20px] w-[2px] bg-white mx-5" />
-              <div className="line grow"></div>
-              <div className="h-[20px] w-[2px] bg-white ml-5" />
-            </div>
-          </div>
-        </div>
-      </section>
-      <div className="mb-[500px]"></div>
     </>
   );
 };

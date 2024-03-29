@@ -290,3 +290,14 @@ h1 {
     linear-gradient(to right, #00b9ff, #59d941);
   background-size: 16px 2px, 100% 2px;
 }
+
+.transform_cus {
+  transform-origin: left;
+}
+
+.embark_step_text {
+  @apply font-medium uppercase;
+
+  font-size: clamp(35px, 10vw, 50px);
+  line-height: clamp(35px, 10vw, 40px);
+}
