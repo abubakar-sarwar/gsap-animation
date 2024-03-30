@@ -12,10 +12,12 @@ const Steps = () => {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: ".text_anim",
-          start: "top top",
-          scrub: true,
-          markers: true,
+          start: "center 50%",
+          end: "+=900",
           pin: true,
+          scrub: 1,
+          markers: true,
+          anticipatePin: 1,
         },
       });
 
@@ -37,7 +39,8 @@ const Steps = () => {
           },
           {
             scaleY: 1,
-          }
+          },
+          "firstStep"
         )
         .fromTo(
           ".embark_step_text",
@@ -47,19 +50,26 @@ const Steps = () => {
           {
             opacity: 1,
           },
-          "<"
+          "firstStep"
         )
-        .fromTo(
-          ".list_item",
-          {
-            opacity: 0,
-          },
-          {
-            opacity: 1,
-            stagger: 0.05,
-          },
-          "<"
-        );
+        .to(".all_steps", {
+          x: "-120%",
+          duration: 5,
+          ease: "sine.out",
+          delay: 1,
+        });
+
+      tl.fromTo(
+        ".list_item",
+        {
+          opacity: 0,
+        },
+        {
+          opacity: 1,
+          stagger: 0.05,
+        },
+        "firstStep"
+      );
     },
     { scope: container }
   );
@@ -72,7 +82,7 @@ const Steps = () => {
             <div className="pt-10 mb-[70px]">
               <h1>Give yourself the gift of anywhere</h1>
             </div>
-            <div className="flex items-center">
+            <div className="flex items-center all_steps">
               <div className="relative">
                 <div className="h-[20px] w-[2px] bg-white mr-5" />
                 <div className="absolute -bottom-5 left-10 border-b w-[74px] transform_cus"></div>
