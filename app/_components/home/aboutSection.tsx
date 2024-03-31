@@ -32,7 +32,7 @@ const AboutSection = () => {
 
       itemsAndImages.forEach((element) => {
         gsap.to(element, {
-          yPercent: element.classList.contains("item_toTop") ? -8 : 0,
+          y: element.classList.contains("item_toTop") ? -50 : 0,
           bottom: element.classList.contains("about_banner") ? 0 : "auto",
           ease: "power2.inOut",
           scrollTrigger: {

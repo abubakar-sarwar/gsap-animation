@@ -72,7 +72,6 @@ const Faqs = () => {
             start: "top 65%",
             end: "bottom bottom",
             scrub: true,
-            markers: true,
           },
         }
       );

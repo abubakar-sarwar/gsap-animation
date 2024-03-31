@@ -9,6 +9,30 @@ const Steps = () => {
 
   useGSAP(
     () => {
+      const texts =
+        document.querySelectorAll<HTMLElement>(".embark_text_title");
+
+      texts.forEach((item) => {
+        const from = item.dataset.fromPos;
+        const to = item.dataset.toPos;
+
+        gsap.fromTo(
+          item,
+          {
+            x: from,
+          },
+          {
+            x: to,
+            scrollTrigger: {
+              trigger: ".text_anim",
+              start: "top 90%",
+              end: "bottom top",
+              scrub: true,
+            },
+          }
+        );
+      });
+
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: ".text_anim",
@@ -90,7 +114,11 @@ const Steps = () => {
         <div className="container">
           <div className="h-screen">
             <div className="py-[50px]">
-              <h1 className="embark_text_title">
+              <h1
+                data-from-pos="10vw"
+                data-to-pos="0"
+                className="embark_text_title"
+              >
                 Give yourself the gift of anywhere
               </h1>
             </div>
