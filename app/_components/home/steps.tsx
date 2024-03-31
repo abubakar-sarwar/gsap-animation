@@ -13,9 +13,9 @@ const Steps = () => {
         scrollTrigger: {
           trigger: ".text_anim",
           start: "center 50%",
-          end: "+=2000",
+          end: "+=2500",
           pin: true,
-          scrub: 1,
+          scrub: true,
           anticipatePin: 1,
         },
       });

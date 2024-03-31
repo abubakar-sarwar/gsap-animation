@@ -1,7 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import FaqsAccordian from "./faqsAccordian";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 type FaqsTypes = {
   _id: string;
@@ -51,16 +53,40 @@ const Faqs = () => {
     },
   ];
 
+  const container = useRef<HTMLDivElement | null>(null);
+
+  useGSAP(
+    () => {
+      gsap.fromTo(
+        ".stagger_faq",
+        {
+          y: 50,
+          opacity: 0,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          stagger: 0.5,
+          scrollTrigger: {
+            trigger: "#faqAnimate",
+            start: "top 65%",
+            end: "bottom bottom",
+            scrub: true,
+            markers: true,
+          },
+        }
+      );
+    },
+    { scope: container }
+  );
+
   return (
-    <div>
-      <div className="container">
+    <div ref={container}>
+      <div className="container" id="faqAnimate">
         {faqs?.map((item) => (
-          <FaqsAccordian
-            key={item?._id}
-            data={item}
-            openId={openId}
-            setOpenId={setOpenId}
-          />
+          <div className="stagger_faq" key={item?._id}>
+            <FaqsAccordian data={item} openId={openId} setOpenId={setOpenId} />
+          </div>
         ))}
       </div>
       <div className="mb-[500px]"></div>
