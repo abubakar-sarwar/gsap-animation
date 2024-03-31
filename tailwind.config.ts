@@ -14,6 +14,7 @@ const config: Config = {
       },
       colors: {
         "drak-body": "#080808",
+        primary: "#91efc8",
       },
       screens: {
         sm: "100%",

@@ -16,7 +16,6 @@ const Steps = () => {
           end: "+=2000",
           pin: true,
           scrub: 1,
-          markers: true,
           anticipatePin: 1,
         },
       });
@@ -177,7 +176,6 @@ const Steps = () => {
           </div>
         </div>
       </div>
-      <div className="mb-[500px]"></div>
     </section>
   );
 };

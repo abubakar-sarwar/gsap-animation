@@ -281,13 +281,13 @@ h1 {
   @apply font-bold uppercase;
 
   font-size: clamp(35px, 10vw, 115px);
-  line-height: clamp(35px, 10vw, 110px);
+  line-height: 1;
 }
 
 .line {
   height: 2px;
   background: linear-gradient(to right, transparent 50%, #080808 50%),
-    linear-gradient(to right, #00b9ff, #59d941);
+    linear-gradient(to right, #91efc8, #91efc8);
   background-size: 16px 2px, 100% 2px;
 }
 
@@ -313,4 +313,16 @@ h1 {
   @apply font-bold;
 
   font-size: clamp(35px, 10vw, 60px);
+}
+
+.faq_question {
+  /* @apply font-bold; */
+
+  font-size: clamp(35px, 10vw, 50px);
+  line-height: 1;
+}
+
+.faq_answer {
+  font-size: clamp(10px, 10vw, 25px);
+  line-height: 1;
 }

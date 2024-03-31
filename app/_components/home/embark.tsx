@@ -38,16 +38,21 @@ const Embark = () => {
   return (
     <>
       <section className="py-[100px]" ref={container}>
-        <div className="pl-20 bg-drak-body text_anim">
-          <h1 data-from-pos="50vw" data-to-pos="0" className="embark_text">
-            EMBARK
-          </h1>
-          <h1 data-from-pos="0" data-to-pos="30vw" className="embark_text">
-            ON THIS JOURNEY
-          </h1>
-          <h1 data-from-pos="40vw" data-to-pos="15vw" className="embark_text">
-            TOGETHER
-          </h1>
+        <div className="h-screen flex items-center relative">
+          <div className="absolute inset-0">
+            <div className="flex"></div>
+          </div>
+          <div className="pl-20 bg-drak-body text_anim">
+            <h1 data-from-pos="50vw" data-to-pos="0" className="embark_text">
+              EMBARK
+            </h1>
+            <h1 data-from-pos="0" data-to-pos="30vw" className="embark_text">
+              ON THIS JOURNEY
+            </h1>
+            <h1 data-from-pos="40vw" data-to-pos="15vw" className="embark_text">
+              TOGETHER
+            </h1>
+          </div>
         </div>
       </section>
     </>
