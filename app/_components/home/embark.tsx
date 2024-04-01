@@ -51,7 +51,6 @@ const Embark = () => {
               start: "top 90%",
               end: "bottom top",
               scrub: true,
-              markers: true,
             },
           }
         );
