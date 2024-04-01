@@ -91,6 +91,16 @@ const Steps = () => {
               stagger: 0.05,
             },
             `stepStart+=${delay}`
+          )
+          .fromTo(
+            step.querySelectorAll(".circle_mouse"),
+            {
+              visibility: "hidden",
+            },
+            {
+              visibility: "visible",
+            },
+            `<`
           );
       });
 
@@ -104,6 +114,21 @@ const Steps = () => {
         },
         0
       );
+
+      document.addEventListener("mousemove", (e) => {
+        document.querySelectorAll(".circle_mouse").forEach((item, index) => {
+          const rect = item.getBoundingClientRect();
+          const deltaX = e.clientX - rect.left - rect.width / 2;
+          const deltaY = e.clientY - rect.top - rect.height / 2;
+
+          gsap.to(item, {
+            x: deltaX,
+            y: deltaY,
+            duration: 0.6,
+            ease: "power2.out", // You can adjust the easing function as needed
+          });
+        });
+      });
     },
     { scope: container }
   );
@@ -127,7 +152,12 @@ const Steps = () => {
                 <div className="h-[20px] w-[2px] bg-white mr-5" />
                 <div className="absolute -bottom-5 left-10 border-b w-[74px] transform_cus"></div>
                 <div className="absolute top-0 left-0 translate-x-[82px] translate-y-[100px]">
-                  <div className="relative pl-5 whitespace-nowrap">
+                  <div className="relative group pl-5 whitespace-nowrap">
+                    <div className="circle_mouse opacity-0 group-hover:opacity-100 duration-150 z-10">
+                      <div className="aspect-square p-2.5 text-center flex items-center justify-center rounded-full bg-primary text-drak-body">
+                        <span>Register</span>
+                      </div>
+                    </div>
                     <span className="absolute top-0 left-0 border-l h-full origin-top border_second" />
                     <h2 className="mb-5 embark_step_text">Register</h2>
                     <ol className="pl-2.5 list-decimal space-y-2">
@@ -149,7 +179,12 @@ const Steps = () => {
                 <div className="h-[20px] w-[2px] bg-white mx-5" />
                 <div className="absolute -bottom-5 left-10 border-b w-[74px] transform_cus"></div>
                 <div className="absolute top-0 left-0 translate-x-[82px] translate-y-[100px]">
-                  <div className="relative pl-5 whitespace-nowrap">
+                  <div className="relative group pl-5 whitespace-nowrap">
+                    <div className="circle_mouse opacity-0 group-hover:opacity-100 duration-150 absolute top-1/2 left-1/2 z-10">
+                      <div className="aspect-square p-2.5 text-center flex items-center justify-center rounded-full bg-primary text-drak-body">
+                        <span>Discover</span>
+                      </div>
+                    </div>
                     <span className="absolute top-0 left-0 border-l h-full origin-top border_second" />
                     <h2 className="mb-5 embark_step_text">FIND A LOCATION</h2>
                     <ol className="pl-2.5 list-decimal space-y-2">

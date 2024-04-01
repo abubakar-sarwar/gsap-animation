@@ -117,6 +117,7 @@ h4,
 h5,
 h6 {
   font-family: Khand;
+  line-height: 1;
 }
 
 h1 {
@@ -281,7 +282,6 @@ h1 {
   @apply font-bold uppercase;
 
   font-size: clamp(35px, 10vw, 115px);
-  line-height: 1;
 }
 
 .line {
@@ -325,4 +325,13 @@ h1 {
 .faq_answer {
   font-size: clamp(10px, 10vw, 25px);
   line-height: 1;
+}
+
+.circle_mouse {
+  transition: opacity 0.15s ease; /* duration-150 */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
 }
