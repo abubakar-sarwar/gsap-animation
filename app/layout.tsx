@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { PreLoader } from "./_components";
+import { Footer, PreLoader } from "./_components";
 import SmoothLayout from "./_components/smoothLayout";
 
 export const metadata: Metadata = {
@@ -20,7 +20,10 @@ export default function RootLayout({
       </head>
       <body className="bg-drak-body">
         {/* <PreLoader /> */}
-        <SmoothLayout>{children}</SmoothLayout>
+        <SmoothLayout>
+          <main>{children}</main>
+          <Footer />
+        </SmoothLayout>
       </body>
     </html>
   );

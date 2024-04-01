@@ -335,3 +335,31 @@ h1 {
   transform: translate(-50%, -50%);
   z-index: 10;
 }
+
+.t-lh-1 {
+  line-height: 1;
+  overflow: hidden;
+  opacity: 0.3;
+  transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1),
+    opacity 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+a:hover .t-lh-1 {
+  transform: translateY(calc(-100%));
+}
+
+.t-lh-1--text {
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 100%;
+  line-height: 1;
+  opacity: 0;
+  transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1),
+    opacity 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+a:hover .t-lh-1--text {
+  transform: translateY(calc(-100%));
+  opacity: 1;
+}
