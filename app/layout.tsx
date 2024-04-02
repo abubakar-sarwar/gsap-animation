@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Footer, PreLoader } from "./_components";
+import { CookieConsent, Footer, PreLoader } from "./_components";
 import SmoothLayout from "./_components/smoothLayout";
 
 export const metadata: Metadata = {
@@ -15,12 +15,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        {/* <script src="https://dl.dropboxusercontent.com/s/f62j9uzlmzp1bnu/ScrollSmoother.min.js?raw=1"></script> */}
-      </head>
       <body className="bg-drak-body">
         {/* <PreLoader /> */}
         <SmoothLayout>
+          <CookieConsent />
           <main>{children}</main>
           <Footer />
         </SmoothLayout>

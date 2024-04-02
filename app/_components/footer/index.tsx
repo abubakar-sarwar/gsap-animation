@@ -18,7 +18,7 @@ const Footer = () => {
     gsap.fromTo(
       ".footer_bg",
       {
-        yPercent: -40,
+        yPercent: -30,
       },
       {
         yPercent: 0,
@@ -51,16 +51,24 @@ const Footer = () => {
                   <p className="text-13 mb-3 opacity-10">LEGAL</p>
                   <ul className="space-y-0.5 text-sm">
                     <li>
-                      <HoverText href="/">Contact</HoverText>
+                      <HoverText href="/" mainTextClass="opacity-40">
+                        Contact
+                      </HoverText>
                     </li>
                     <li>
-                      <HoverText href="/">Privacy Policy</HoverText>
+                      <HoverText href="/" mainTextClass="opacity-40">
+                        Privacy Policy
+                      </HoverText>
                     </li>
                     <li>
-                      <HoverText href="/">Terms & Conditions</HoverText>
+                      <HoverText href="/" mainTextClass="opacity-40">
+                        Terms & Conditions
+                      </HoverText>
                     </li>
                     <li>
-                      <HoverText href="/">Cookie Policy</HoverText>
+                      <HoverText href="/" mainTextClass="opacity-40">
+                        Cookie Policy
+                      </HoverText>
                     </li>
                   </ul>
                 </div>
@@ -68,13 +76,19 @@ const Footer = () => {
                   <p className="text-13 mb-3 opacity-10">UPDATES</p>
                   <ul className="space-y-0.5 text-sm">
                     <li>
-                      <HoverText href="/">Twitter</HoverText>
+                      <HoverText href="/" mainTextClass="opacity-40">
+                        Twitter
+                      </HoverText>
                     </li>
                     <li>
-                      <HoverText href="/">Instagram</HoverText>
+                      <HoverText href="/" mainTextClass="opacity-40">
+                        Instagram
+                      </HoverText>
                     </li>
                     <li>
-                      <HoverText href="/">Facebook</HoverText>
+                      <HoverText href="/" mainTextClass="opacity-40">
+                        Facebook
+                      </HoverText>
                     </li>
                   </ul>
                 </div>

@@ -14,6 +14,8 @@ const config: Config = {
       },
       colors: {
         "drak-body": "#080808",
+        "light-dark": "#161615",
+
         primary: "#91efc8",
 
         "font-dark": "#94938d",
