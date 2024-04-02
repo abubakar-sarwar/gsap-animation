@@ -88,7 +88,6 @@ const Faqs = () => {
           </div>
         ))}
       </div>
-      <div className="mb-[500px]"></div>
     </div>
   );
 };

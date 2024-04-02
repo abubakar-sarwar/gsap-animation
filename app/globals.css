@@ -363,3 +363,17 @@ a:hover .t-lh-1--text {
   transform: translateY(calc(-100%));
   opacity: 1;
 }
+
+.text-13 {
+  font-size: 13px;
+}
+
+.footer_bg {
+  background-color: #161615;
+}
+
+.footer_text {
+  @apply font-bold text-center opacity-60;
+
+  font-size: clamp(35px, 30vw, 300px);
+}
