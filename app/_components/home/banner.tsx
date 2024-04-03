@@ -153,14 +153,14 @@ const Banner = () => {
           <h1
             data-lag="0.1"
             data-speed="1"
-            className="absolute inset-0 font-bold text-center leading-[110px] uppercase banner_text text-white"
+            className="absolute inset-0 font-bold text-center uppercase banner_text text-white"
           >
             EMBARK ON WILD <br /> ADVENTURES WITH US
           </h1>
           <h1
             data-lag="0.1"
             data-speed="1"
-            className="w-full font-bold text-center z-20 leading-[110px] uppercase outlineText banner_text text-white"
+            className="w-full font-bold text-center z-20 uppercase outlineText banner_text text-white"
           >
             EMBARK ON WILD <br /> ADVENTURES WITH US
           </h1>

@@ -4,6 +4,8 @@ import { useGSAP } from "@gsap/react";
 import { ScrollToPlugin, ScrollTrigger } from "gsap/all";
 import { useEffect } from "react";
 import Lenis from "@studio-freight/lenis";
+import "resize-observer-polyfill";
+import ResizeObserver from "resize-observer-polyfill";
 
 const SmoothLayout = ({
   children,
@@ -15,14 +17,15 @@ const SmoothLayout = ({
   });
 
   useEffect(() => {
-    const lenis = new Lenis();
+    const ro = new ResizeObserver((entries, observer) => {
+      const lenis = new Lenis();
+      function raf(time: any) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
 
-    function raf(time: any) {
-      lenis.raf(time);
       requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
+    });
   }, []);
 
   return (

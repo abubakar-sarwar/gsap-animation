@@ -131,6 +131,7 @@ body {
     Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif;
   font-weight: 300;
   color: #ffffff;
+  line-height: 1;
 }
 
 h1,
@@ -219,7 +220,7 @@ h1 {
 }
 
 .banner_text {
-  font-size: 120px;
+  font-size: clamp(40px, 30vw, 120px);
 }
 
 #loader .counter {

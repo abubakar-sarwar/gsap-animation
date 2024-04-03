@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { CookieConsent, Footer, PreLoader } from "./_components";
+import { CookieConsent, Footer, Navbar, PreLoader } from "./_components";
 import SmoothLayout from "./_components/smoothLayout";
 
 export const metadata: Metadata = {
@@ -18,8 +18,9 @@ export default function RootLayout({
       <body className="bg-drak-body">
         {/* <PreLoader /> */}
         <SmoothLayout>
-          <CookieConsent />
+          <Navbar />
           <main>{children}</main>
+          <CookieConsent />
           <Footer />
         </SmoothLayout>
       </body>
