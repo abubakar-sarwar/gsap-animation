@@ -30,6 +30,35 @@ const Navbar = () => {
     }
   });
 
+  const scrollToFAQs = () => {
+    const faqsElement = document.getElementById("faqs");
+    if (faqsElement) {
+      const startY = window.scrollY;
+      const targetY = faqsElement.getBoundingClientRect().top + window.scrollY;
+      const distance = Math.abs(startY - targetY);
+      const duration = 1000;
+
+      const easeInOutQuad = (t: any) =>
+        t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+
+      let startTime: any;
+      const animation = (currentTime: any) => {
+        if (!startTime) {
+          startTime = currentTime;
+        }
+        const timeElapsed = currentTime - startTime;
+        const scrollProgress = easeInOutQuad(
+          Math.min(timeElapsed / duration, 1)
+        );
+        window.scrollTo(0, startY + distance * scrollProgress);
+        if (timeElapsed < duration) {
+          requestAnimationFrame(animation);
+        }
+      };
+      requestAnimationFrame(animation);
+    }
+  };
+
   return (
     <div
       id="navBar"
@@ -42,7 +71,7 @@ const Navbar = () => {
         <ul className="max-sm:hidden flex space-x-4 ml-16 text-xs sm:mt-1">
           <li>
             <HoverText
-              href="/about"
+              href="/"
               className="capitalize"
               mainTextClass="opacity-50"
             >
@@ -51,7 +80,7 @@ const Navbar = () => {
           </li>
           <li>
             <HoverText
-              href="/about"
+              href="/"
               className="capitalize"
               mainTextClass="opacity-50"
             >
@@ -60,7 +89,8 @@ const Navbar = () => {
           </li>
           <li>
             <HoverText
-              href="/about"
+              onClick={scrollToFAQs}
+              href="#faqs"
               className="capitalize"
               mainTextClass="opacity-50"
             >
@@ -69,7 +99,7 @@ const Navbar = () => {
           </li>
           <li>
             <HoverText
-              href="/about"
+              href="/"
               className="capitalize"
               mainTextClass="opacity-50"
             >

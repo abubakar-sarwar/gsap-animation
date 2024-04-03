@@ -40,13 +40,13 @@ const Footer = () => {
       >
         <div ref={footerRef} className="footer_bg pt-8">
           <div className="container">
-            <div className="flex justify-between pt-20 pb-10">
-              <div>
+            <div className="sm:flex justify-between pt-20 pb-10 gap-10">
+              <div className="max-sm:mb-5">
                 <p className="text-2xl">
                   ThrillQuest is the adventure <br /> you've been searching for.
                 </p>
               </div>
-              <div className="grid grid-cols-3 gap-28">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-y-6 gap-x-28">
                 <div>
                   <p className="text-13 mb-3 opacity-10">LEGAL</p>
                   <ul className="space-y-0.5 text-sm">
@@ -94,14 +94,18 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-            <div className="flex items-center justify-between border-b border-font-dark/10">
-              <p className="text-13 mb-3 opacity-10">
+            <div className="flex flex-wrap gap-x-10 items-center justify-center sm:justify-between border-b border-font-dark/10">
+              <p className="text-xs sm:text-13 mb-1 sm:mb-3 opacity-10 text-center">
                 Copyright © 2024. ABZ, Inc. All rights reserved.
               </p>
-              <p className="text-13 mb-3 opacity-10">Made by Abubakar</p>
+              <p className="text-xs sm:text-13 mb-3 opacity-10">
+                Made by Abubakar
+              </p>
             </div>
             <div className="relative h-[180px] overflow-hidden">
-              <h2 className="footer_text absolute inset-0">ThrillQuest</h2>
+              <h2 className="footer_text absolute inset-0 top-5">
+                ThrillQuest
+              </h2>
             </div>
           </div>
         </div>

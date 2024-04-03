@@ -357,15 +357,11 @@ h1 {
 }
 
 .faq_question {
-  /* @apply font-bold; */
-
-  font-size: clamp(35px, 10vw, 50px);
-  line-height: 1;
+  font-size: clamp(30px, 9vw, 50px);
 }
 
 .faq_answer {
-  font-size: clamp(10px, 10vw, 25px);
-  line-height: 1;
+  font-size: clamp(10px, 9vw, 25px);
 }
 
 .circle_mouse {

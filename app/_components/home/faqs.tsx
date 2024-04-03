@@ -80,7 +80,7 @@ const Faqs = () => {
   );
 
   return (
-    <div ref={container}>
+    <div ref={container} id="faqs">
       <div className="container" id="faqAnimate">
         {faqs?.map((item) => (
           <div className="stagger_faq" key={item?._id}>
