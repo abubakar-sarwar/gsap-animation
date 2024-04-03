@@ -228,16 +228,12 @@ h1 {
   width: max-content;
   font-family: Khand;
   font-size: clamp(100px, 67vw, 600px);
-  line-height: 1;
   height: clamp(100px, 67vw, 600px);
+  line-height: 1;
   overflow: hidden;
-  font-weight: bolder;
+  font-weight: 700;
   color: black;
   opacity: 0.3;
-}
-
-#loader .loading_text {
-  font-size: clamp(100px, 67vw, 200px);
 }
 
 #loader .bar {

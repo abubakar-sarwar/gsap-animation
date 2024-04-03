@@ -114,7 +114,7 @@ const PreLoader = () => {
     <div ref={loaderRef}>
       <div
         id="loader"
-        className="fixed inset-0 z-50 bg-white pointer-events-none"
+        className="fixed inset-0 z-[9999] bg-white pointer-events-none"
       >
         <div className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 counter text-drak-body">
           <div className="counter-1">
@@ -138,7 +138,7 @@ const PreLoader = () => {
             <div className="num">0</div>
           </div>
         </div>
-        <div className="font-bold flex absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 loading_text text-white">
+        <div className="font-bold flex absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 text-white">
           <div className="bars border rounded-md overflow-hidden flex w-[300px] h-[50px] absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 bg-white">
             <div className="bar_1 w-0 h-full bg-drak-body"></div>
             <div className="bar_2 w-0 h-full bg-drak-body"></div>
