@@ -2,10 +2,7 @@
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollToPlugin, ScrollTrigger } from "gsap/all";
-import { useEffect } from "react";
-import Lenis from "@studio-freight/lenis";
-import "resize-observer-polyfill";
-import ResizeObserver from "resize-observer-polyfill";
+import { useEffect, useState } from "react";
 
 const SmoothLayout = ({
   children,
@@ -16,17 +13,34 @@ const SmoothLayout = ({
     gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
   });
 
-  useEffect(() => {
-    const ro = new ResizeObserver((entries, observer) => {
-      const lenis = new Lenis();
-      function raf(time: any) {
-        lenis.raf(time);
-        requestAnimationFrame(raf);
-      }
+  const [isDesktop, setIsDesktop] = useState(false);
 
-      requestAnimationFrame(raf);
-    });
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(min-width: 769px)");
+    setIsDesktop(mediaQuery.matches);
+    const handleResize = () => {
+      setIsDesktop(mediaQuery.matches);
+    };
+
+    mediaQuery.addEventListener("change", handleResize);
+    return () => {
+      mediaQuery.removeEventListener("change", handleResize);
+    };
   }, []);
+
+  useEffect(() => {
+    if (isDesktop) {
+      import("@studio-freight/lenis").then((LenisModule) => {
+        const Lenis = LenisModule.default;
+        const lenis = new Lenis();
+        function raf(time: any) {
+          lenis.raf(time);
+          requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
+      });
+    }
+  }, [isDesktop]);
 
   return (
     <div id="smooth-wrapper">
