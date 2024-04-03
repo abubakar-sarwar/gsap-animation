@@ -220,7 +220,7 @@ h1 {
 }
 
 .banner_text {
-  font-size: clamp(40px, 30vw, 120px);
+  font-size: clamp(40px, 18vw, 120px);
 }
 
 #loader .counter {
@@ -238,7 +238,6 @@ h1 {
 
 #loader .loading_text {
   font-size: clamp(100px, 67vw, 200px);
-  line-height: 1;
 }
 
 #loader .bar {
@@ -247,17 +246,15 @@ h1 {
 
 .about_text,
 .letsjourney_text {
-  @apply font-bold uppercase;
+  @apply font-bold uppercase whitespace-nowrap;
 
-  font-size: clamp(35px, 10vw, 100px);
-  line-height: clamp(35px, 10vw, 90px);
+  font-size: clamp(30px, 10vw, 100px);
 }
 
 .third_heading {
   @apply font-bold uppercase;
 
   font-size: clamp(35px, 10vw, 70px);
-  line-height: clamp(35px, 10vw, 60px);
 }
 
 .about_text_media {
@@ -297,9 +294,29 @@ h1 {
   margin-top: 13rem;
 }
 
+@media (max-width: 1092px) {
+  .history_grid {
+    column-gap: 0;
+  }
+  .history_grid-item:nth-child(1) {
+    grid-area: 2 / 1 / 2 / 8;
+  }
+  .history_grid-item:nth-child(2) {
+    grid-area: 2 / 10 / 3 / 17;
+    margin-top: 13rem;
+  }
+  .history_grid-item:nth-child(3) {
+    grid-area: 3 / 2 / 4 / 9;
+  }
+
+  .history_grid-item:nth-child(4) {
+    grid-area: 3 / 10 / 4 / 17;
+    margin-top: 13rem;
+  }
+}
+
 .history_grid-item .history_grid-text {
-  font-size: clamp(35px, 10vw, 35px);
-  line-height: clamp(35px, 10vw, 35px);
+  font-size: clamp(20px, 5vw, 35px);
 }
 
 .embark_text {
@@ -398,5 +415,5 @@ a:hover .t-lh-1--text {
 .footer_text {
   @apply font-bold text-center opacity-60;
 
-  font-size: clamp(35px, 30vw, 300px);
+  font-size: clamp(35px, 18vw, 300px);
 }

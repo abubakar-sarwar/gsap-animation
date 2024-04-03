@@ -112,21 +112,29 @@ const AboutSection = () => {
             ))}
           </span>
         </h1>
-        <h1 className="about_text">
-          {"EXPERIENCES & EXPEDITIONS.".split("")?.map((text, index) => (
-            <div className="char" key={index} style={{ display: "inline" }}>
-              {text}
+        <h1 className="flex flex-wrap gap-x-3 about_text">
+          {"EXPERIENCES & EXPEDITIONS.".split(" ")?.map((item, index) => (
+            <div className="flex" key={index}>
+              {item.split("")?.map((text, ind) => (
+                <div className="char" key={ind} style={{ display: "inline" }}>
+                  {text}
+                </div>
+              ))}
             </div>
           ))}
         </h1>
-        <h1 className="about_text">
-          {"EXPLORE THE UNCHARTED.".split("")?.map((text, index) => (
-            <div className="char" key={index} style={{ display: "inline" }}>
-              {text}
+        <h1 className="flex flex-wrap gap-x-3 about_text">
+          {"EXPLORE THE UNCHARTED.".split(" ")?.map((item, index) => (
+            <div className="flex" key={index}>
+              {item.split("")?.map((text, ind) => (
+                <div className="char" key={ind} style={{ display: "inline" }}>
+                  {text}
+                </div>
+              ))}
             </div>
           ))}
         </h1>
-        <div className="absolute top-1/2 h-full overflow-hidden item_toTop -translate-y-1/2 right-0 z-[-1] w-1/4">
+        <div className="w-1/2 lg:w-1/4 absolute top-1/2 h-full overflow-hidden item_toTop -translate-y-1/2 right-0 z-[-1]">
           <Image
             src="/about_sec.jpg"
             alt="wild"

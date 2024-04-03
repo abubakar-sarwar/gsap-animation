@@ -160,7 +160,7 @@ const Steps = () => {
                     </div>
                     <span className="absolute top-0 left-0 border-l h-full origin-top border_second" />
                     <h2 className="mb-5 embark_step_text">Register</h2>
-                    <ol className="pl-2.5 list-decimal space-y-2">
+                    <ol className="pl-7 list-decimal space-y-2">
                       <li className="list_item">Visit registration page.</li>
                       <li className="list_item">
                         Enter info & create password.
@@ -187,7 +187,7 @@ const Steps = () => {
                     </div>
                     <span className="absolute top-0 left-0 border-l h-full origin-top border_second" />
                     <h2 className="mb-5 embark_step_text">FIND A LOCATION</h2>
-                    <ol className="pl-2.5 list-decimal space-y-2">
+                    <ol className="pl-7 list-decimal space-y-2">
                       <li className="list_item">Explore destinations.</li>
                       <li className="list_item">Select preferred location.</li>
                       <li className="list_item">
@@ -206,7 +206,7 @@ const Steps = () => {
                   <div className="relative pl-5 whitespace-nowrap">
                     <span className="absolute top-0 left-0 border-l h-full origin-top border_second" />
                     <h2 className="mb-5 embark_step_text">PAYMENT</h2>
-                    <ol className="pl-2.5 list-decimal space-y-2">
+                    <ol className="pl-7 list-decimal space-y-2">
                       <li className="list_item">Review booking details.</li>
                       <li className="list_item">Choose payment method.</li>
                       <li className="list_item">Verify & complete.</li>

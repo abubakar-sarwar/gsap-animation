@@ -22,9 +22,9 @@ const SmoothLayout = ({
       setIsDesktop(mediaQuery.matches);
     };
 
-    mediaQuery.addEventListener("change", handleResize);
+    window.addEventListener("change", handleResize);
     return () => {
-      mediaQuery.removeEventListener("change", handleResize);
+      window.removeEventListener("change", handleResize);
     };
   }, []);
 

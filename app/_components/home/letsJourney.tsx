@@ -165,7 +165,7 @@ const LetsJourney = () => {
               >
                 Nature's beauty, from starlight to symphony, mesmerizes.
               </h3>
-              <p className="w-[70%] text-justify text-xs mt-2.5">
+              <p className="sm:w-[70%] sm:text-justify max-sm:line-clamp-6 text-xs mt-2.5">
                 Starlight to Symphony was a magical journey into the heart of
                 nature. The wilderness serenaded us with its beauty and wildlife
                 symphony. Unforgettable encounters and stunning landscapes made
@@ -192,7 +192,7 @@ const LetsJourney = () => {
               >
                 Valleys cradle lakes - nature's embrace soothes and excites.
               </h3>
-              <p className="w-[70%] text-justify text-xs mt-2.5">
+              <p className="sm:w-[70%] sm:text-justify max-sm:line-clamp-6 text-xs mt-2.5">
                 Amidst the gentle curves of valleys, serene lakes rest, cradled
                 by nature's comforting embrace. Here, tranquility and excitement
                 intertwine, offering a harmonious escape into the beauty of the
@@ -219,7 +219,7 @@ const LetsJourney = () => {
               >
                 Exploring forests light up nature's beauty.
               </h3>
-              <p className="w-[70%] text-justify text-xs mt-2.5">
+              <p className="sm:w-[70%] sm:text-justify max-sm:line-clamp-6 text-xs mt-2.5">
                 Forest exploration, a beacon to nature's beauty, each step
                 reveals wonders, celebrating its timeless allure.
               </p>
@@ -244,7 +244,7 @@ const LetsJourney = () => {
               >
                 Unveiling the mesmerizing beauty of islands and the sea.
               </h3>
-              <p className="w-[70%] text-justify text-xs mt-2.5">
+              <p className="sm:w-[70%] sm:text-justify max-sm:line-clamp-6 text-xs mt-2.5">
                 Journeying through islands and sea reveals captivating beauty:
                 pristine landscapes, serene waters, and breathtaking vistas.
                 From secluded coves to vast horizons, every moment is a

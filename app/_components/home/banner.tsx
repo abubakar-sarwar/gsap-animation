@@ -131,10 +131,7 @@ const Banner = () => {
   );
 
   return (
-    <section
-      ref={container}
-      className="h-screen min-h-[600px] mb-[100px] relative"
-    >
+    <section ref={container} className="h-screen mb-[100px] relative">
       <div className="absolute w-[80%] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
         <div className="relative flex">
           <video
