@@ -2,6 +2,7 @@
 
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { ScrollToPlugin, ScrollTrigger } from "gsap/all";
 import { useRef } from "react";
 
 const Steps = () => {
@@ -9,6 +10,7 @@ const Steps = () => {
 
   useGSAP(
     () => {
+      gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
       const texts =
         document.querySelectorAll<HTMLElement>(".embark_text_title");
 

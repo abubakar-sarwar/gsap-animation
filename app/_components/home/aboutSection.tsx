@@ -3,6 +3,7 @@ import { useRef } from "react";
 import Image from "next/image";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { ScrollToPlugin, ScrollTrigger } from "gsap/all";
 
 const AboutSection = () => {
   const group1 = ["FROM", "THRILLING"];
@@ -13,6 +14,8 @@ const AboutSection = () => {
 
   useGSAP(
     () => {
+      gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
+
       gsap.from(".char", {
         opacity: 0.1,
         duration: 0.3,

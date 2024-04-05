@@ -2,6 +2,7 @@
 
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { ScrollToPlugin, ScrollTrigger } from "gsap/all";
 import Image from "next/image";
 import { useRef } from "react";
 
@@ -10,6 +11,8 @@ const Embark = () => {
 
   useGSAP(
     () => {
+      gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
+
       const texts = document.querySelectorAll<HTMLElement>(".embark_text");
 
       texts.forEach((item) => {

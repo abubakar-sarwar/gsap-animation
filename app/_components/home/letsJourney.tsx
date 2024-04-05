@@ -1,6 +1,7 @@
 "use client";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { ScrollToPlugin, ScrollTrigger } from "gsap/all";
 import Image from "next/image";
 import { useRef } from "react";
 
@@ -9,6 +10,7 @@ const LetsJourney = () => {
 
   useGSAP(
     () => {
+      gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
       gsap.to(".letsjourney_text:first-child", {
         x: () => -innerWidth * 3,
         scale: 10,

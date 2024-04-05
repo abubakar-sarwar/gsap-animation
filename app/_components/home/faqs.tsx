@@ -4,6 +4,7 @@ import { useRef, useState } from "react";
 import FaqsAccordian from "./faqsAccordian";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { ScrollToPlugin, ScrollTrigger } from "gsap/all";
 
 type FaqsTypes = {
   _id: string;
@@ -57,6 +58,7 @@ const Faqs = () => {
 
   useGSAP(
     () => {
+      gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
       gsap.fromTo(
         ".stagger_faq",
         {
