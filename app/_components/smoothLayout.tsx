@@ -9,10 +9,6 @@ const SmoothLayout = ({
 }: Readonly<{
   children: React.ReactNode;
 }>) => {
-  useGSAP(() => {
-    gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
-  });
-
   const [isDesktop, setIsDesktop] = useState(false);
 
   useEffect(() => {
