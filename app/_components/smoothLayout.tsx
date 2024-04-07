@@ -1,7 +1,4 @@
 "use client";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import { ScrollToPlugin, ScrollTrigger } from "gsap/all";
 import { useEffect, useState } from "react";
 
 const SmoothLayout = ({
