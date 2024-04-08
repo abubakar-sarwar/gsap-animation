@@ -392,7 +392,7 @@ a:hover .t-lh-1 {
 }
 
 a:hover .t-lh-1--text {
-  transform: translateY(calc(-100%));
+  transform: translateY(-100%);
   opacity: 1;
 }
 
