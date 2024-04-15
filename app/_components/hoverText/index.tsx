@@ -17,10 +17,10 @@ const HoverText = ({
 }) => {
   return (
     <Link {...props} href={href} className={`inline-block group ${className}`}>
-      <div className="relative overflow-hidden">
-        <div className={`t-lh-1 ${mainTextClass}`}>{children}</div>
-        <div className={`t-lh-1--text ${hoverClass}`}>{children}</div>
-      </div>
+      <span className="block relative overflow-hidden">
+        <span className={`block t-lh-1 ${mainTextClass}`}>{children}</span>
+        <span className={`block t-lh-1--text ${hoverClass}`}>{children}</span>
+      </span>
     </Link>
   );
 };
