@@ -34,7 +34,6 @@ const PrivacyPolicyPage = () => {
             start: "top 60%",
             end: "bottom 80%",
             scrub: true,
-            markers: true,
           },
         }
       );

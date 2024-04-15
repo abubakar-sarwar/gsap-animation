@@ -95,7 +95,7 @@ const PreLoader = () => {
           ".bars",
           {
             rotate: 50,
-            scale: 40,
+            scale: 80,
             duration: 1,
             ease: "power2.inOut",
           },

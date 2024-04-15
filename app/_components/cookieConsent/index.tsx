@@ -34,7 +34,7 @@ const CookieConsent = () => {
     >
       <div className="opacity-50 whitespace-nowrap">This website uses</div>
       <HoverText
-        href="/"
+        href="/privacy-policy"
         className="ml-1 pb-0.5 border-b"
         mainTextClass="opacity-50"
       >
