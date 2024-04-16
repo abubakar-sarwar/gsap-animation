@@ -36,7 +36,6 @@ const PrivacyPolicyPage = () => {
       );
 
       const tl = gsap.getById("preloader");
-      console.log(tl);
 
       if (tl) {
         if (tl.progress() === 1) {
@@ -46,10 +45,13 @@ const PrivacyPolicyPage = () => {
             runAnimations();
           });
         }
+      } else {
+        runAnimations();
       }
 
       const elem = document.querySelector(".policyTitle");
       const elem2 = document.querySelector("#faqAnimate");
+
       gsap.set(elem, {
         scale: 0.5,
         opacity: 0,
@@ -60,6 +62,8 @@ const PrivacyPolicyPage = () => {
       });
 
       function runAnimations() {
+        const elem = document.querySelector(".policyTitle");
+        const elem2 = document.querySelector("#faqAnimate");
         const tl = gsap.timeline();
         tl.to(elem, {
           scale: 1,

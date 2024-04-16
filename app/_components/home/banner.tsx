@@ -76,6 +76,8 @@ const Banner = () => {
             runAnimations();
           });
         }
+      } else {
+        runAnimations();
       }
 
       function runAnimations() {
