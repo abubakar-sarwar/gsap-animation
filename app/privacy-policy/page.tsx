@@ -12,12 +12,9 @@ const PrivacyPolicyPage = () => {
     () => {
       gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 
-      // Select all elements inside #faqAnimate container
       const elements = document.querySelectorAll(
         "#faqAnimate > *, #faqAnimate ul > li"
       );
-
-      console.log(elements);
 
       gsap.fromTo(
         elements,
@@ -37,6 +34,47 @@ const PrivacyPolicyPage = () => {
           },
         }
       );
+
+      const tl = gsap.getById("preloader");
+      console.log(tl);
+
+      if (tl) {
+        if (tl.progress() === 1) {
+          runAnimations();
+        } else {
+          tl.eventCallback("onComplete", () => {
+            runAnimations();
+          });
+        }
+      }
+
+      const elem = document.querySelector(".policyTitle");
+      const elem2 = document.querySelector("#faqAnimate");
+      gsap.set(elem, {
+        scale: 0.5,
+        opacity: 0,
+      });
+      gsap.set(elem2, {
+        opacity: 0,
+        y: 50,
+      });
+
+      function runAnimations() {
+        const tl = gsap.timeline();
+        tl.to(elem, {
+          scale: 1,
+          opacity: 1,
+          duration: 0.8,
+          ease: "power2.out",
+        }).to(
+          elem2,
+          {
+            opacity: 1,
+            y: 0,
+          },
+          "<=0.2"
+        );
+      }
     },
     { scope: container }
   );
