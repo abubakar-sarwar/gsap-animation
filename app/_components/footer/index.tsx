@@ -3,37 +3,48 @@ import { useEffect, useRef } from "react";
 import { HoverText } from "..";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
+import { usePathname } from "next/navigation";
 
 const Footer = () => {
+  const pathname = usePathname();
   const footerRef = useRef<HTMLDivElement | null>(null);
   const fakeFooterRef = useRef<HTMLDivElement | null>(null);
+  const container = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     if (footerRef.current && fakeFooterRef.current) {
       fakeFooterRef.current.style.height = `${footerRef.current.offsetHeight}px`;
     }
-  }, []);
+  }, [pathname]);
 
-  useGSAP(() => {
-    gsap.fromTo(
-      ".footer_bg",
-      {
-        yPercent: -30,
-      },
-      {
-        yPercent: 0,
-        scrollTrigger: {
-          trigger: ".fake_footer",
-          start: "top bottom",
-          end: "70% 80%",
-          scrub: true,
+  useGSAP(
+    () => {
+      gsap.registerPlugin(ScrollTrigger);
+      gsap.fromTo(
+        footerRef.current,
+        {
+          yPercent: -30,
         },
-      }
-    );
-  });
+        {
+          yPercent: 0,
+          scrollTrigger: {
+            trigger: fakeFooterRef.current,
+            start: "top bottom",
+            end: "70% 80%",
+            scrub: true,
+          },
+        }
+      );
+    },
+    {
+      scope: container,
+      dependencies: [pathname, fakeFooterRef, footerRef],
+    }
+  );
 
   return (
-    <footer>
+    <footer ref={container}>
       <div
         ref={fakeFooterRef}
         className="fake_footer overflow-hidden mt-[100px]"

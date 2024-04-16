@@ -3,18 +3,34 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollToPlugin, ScrollTrigger } from "gsap/all";
-import { useRef } from "react";
+import { MouseEventHandler, useRef } from "react";
 
 const Steps = () => {
   const container = useRef<HTMLDivElement | null>(null);
 
   useGSAP(
-    () => {
+    (context: any, contextSafe: any) => {
       gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
+
+      const onClickGood = contextSafe((e: MouseEvent) => {
+        document.querySelectorAll(".circle_mouse").forEach((item) => {
+          const rect = item.getBoundingClientRect();
+          const deltaX = e.clientX - rect.left - rect.width / 2;
+          const deltaY = e.clientY - rect.top - rect.height / 2;
+
+          gsap.to(item, {
+            x: deltaX,
+            y: deltaY,
+            duration: 0.6,
+            ease: "power2.out", // You can adjust the easing function as needed
+          });
+        });
+      });
+
       const texts =
         document.querySelectorAll<HTMLElement>(".embark_text_title");
 
-      texts.forEach((item) => {
+      texts.forEach((item: HTMLElement) => {
         const from = item.dataset.fromPos;
         const to = item.dataset.toPos;
 
@@ -117,20 +133,11 @@ const Steps = () => {
         0
       );
 
-      document.addEventListener("mousemove", (e) => {
-        document.querySelectorAll(".circle_mouse").forEach((item, index) => {
-          const rect = item.getBoundingClientRect();
-          const deltaX = e.clientX - rect.left - rect.width / 2;
-          const deltaY = e.clientY - rect.top - rect.height / 2;
+      document.addEventListener("mousemove", onClickGood);
 
-          gsap.to(item, {
-            x: deltaX,
-            y: deltaY,
-            duration: 0.6,
-            ease: "power2.out", // You can adjust the easing function as needed
-          });
-        });
-      });
+      return () => {
+        document.removeEventListener("mousemove", onClickGood);
+      };
     },
     { scope: container }
   );
