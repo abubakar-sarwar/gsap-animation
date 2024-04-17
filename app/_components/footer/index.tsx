@@ -39,7 +39,7 @@ const Footer = () => {
     },
     {
       scope: container,
-      dependencies: [pathname, fakeFooterRef, footerRef],
+      dependencies: [pathname, fakeFooterRef, footerRef, container],
     }
   );
 
