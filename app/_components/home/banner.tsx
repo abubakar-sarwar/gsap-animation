@@ -1,7 +1,6 @@
 "use client";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { ScrollToPlugin, ScrollTrigger } from "gsap/all";
 import Image from "next/image";
 import { useRef } from "react";
 
@@ -67,7 +66,6 @@ const Banner = () => {
 
   useGSAP(
     () => {
-      gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
       const tl = gsap.getById("preloader");
 
       if (tl) {

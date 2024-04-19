@@ -1,7 +1,6 @@
 "use client";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { ScrollToPlugin, ScrollTrigger } from "gsap/all";
 import Image from "next/image";
 import { useRef } from "react";
 
@@ -10,7 +9,6 @@ const LetsJourney = () => {
 
   useGSAP(
     () => {
-      gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
       gsap.to(".letsjourney_text:first-child", {
         x: () => -innerWidth * 3,
         scale: 10,
@@ -52,63 +50,63 @@ const LetsJourney = () => {
         },
       });
 
-      const itemsB = document.querySelectorAll(".item_toBottom");
-      const itemsT = document.querySelectorAll(".item_toTop");
-      const images = document.querySelectorAll(".history_grid-item img");
+      // const itemsB = document.querySelectorAll(".item_toBottom");
+      // const itemsT = document.querySelectorAll(".item_toTop");
+      // const images = document.querySelectorAll(".history_grid-item img");
 
-      itemsB.forEach((item) => {
-        tl.to(
-          item,
-          {
-            yPercent: 10,
-            ease: "power2.inOut",
-          },
-          0
-        );
-      });
-      itemsT.forEach((item) => {
-        tl.to(
-          item,
-          {
-            yPercent: -10,
-            ease: "power2.inOut",
-          },
-          0
-        );
-      });
-      images.forEach((img) => {
-        tl.to(
-          img,
-          {
-            bottom: 0,
-            ease: "power2.inOut",
-          },
-          0
-        );
-      });
+      // itemsB.forEach((item) => {
+      //   tl.to(
+      //     item,
+      //     {
+      //       yPercent: 10,
+      //       ease: "power2.inOut",
+      //     },
+      //     0
+      //   );
+      // });
+      // itemsT.forEach((item) => {
+      //   tl.to(
+      //     item,
+      //     {
+      //       yPercent: -10,
+      //       ease: "power2.inOut",
+      //     },
+      //     0
+      //   );
+      // });
+      // images.forEach((img) => {
+      //   tl.to(
+      //     img,
+      //     {
+      //       bottom: 0,
+      //       ease: "power2.inOut",
+      //     },
+      //     0
+      //   );
+      // });
 
-      const texts = document.querySelectorAll<HTMLElement>(".third_heading");
+      // const texts = document.querySelectorAll<HTMLElement>(".third_heading");
 
-      texts.forEach((item) => {
-        const from = item.dataset.fromPos;
-        const to = item.dataset.toPos;
+      // texts.forEach((item) => {
+      //   const from = item.dataset.fromPos;
+      //   const to = item.dataset.toPos;
 
-        gsap.fromTo(
-          item,
-          {
-            x: from,
-          },
-          {
-            x: to,
-            scrollTrigger: {
-              trigger: ".text_anim",
-              start: "top 90%",
-              end: "bottom top",
-              scrub: true,
-            },
-          }
-        );
-      });
+      //   gsap.fromTo(
+      //     item,
+      //     {
+      //       x: from,
+      //     },
+      //     {
+      //       x: to,
+      //       scrollTrigger: {
+      //         trigger: ".text_anim",
+      //         start: "top 90%",
+      //         end: "bottom top",
+      //         scrub: true,
+      //       },
+      //     }
+      //   );
+      // });
     },
     { scope: container }
   );

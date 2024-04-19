@@ -10,8 +10,6 @@ const PrivacyPolicyPage = () => {
 
   useGSAP(
     () => {
-      gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
-
       const elements = document.querySelectorAll(
         "#faqAnimate > *, #faqAnimate ul > li"
       );

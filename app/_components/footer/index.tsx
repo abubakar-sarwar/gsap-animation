@@ -3,7 +3,6 @@ import { useEffect, useRef } from "react";
 import { HoverText } from "..";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/all";
 import { usePathname } from "next/navigation";
 
 const Footer = () => {
@@ -20,16 +19,15 @@ const Footer = () => {
 
   useGSAP(
     () => {
-      gsap.registerPlugin(ScrollTrigger);
       gsap.fromTo(
-        footerRef.current,
+        ".footer_bg",
         {
           yPercent: -30,
         },
         {
           yPercent: 0,
           scrollTrigger: {
-            trigger: fakeFooterRef.current,
+            trigger: ".fake_footer",
             start: "top bottom",
             end: "70% 80%",
             scrub: true,
@@ -39,7 +37,6 @@ const Footer = () => {
     },
     {
       scope: container,
-      dependencies: [pathname, fakeFooterRef, footerRef, container],
     }
   );
 

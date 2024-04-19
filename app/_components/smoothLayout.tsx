@@ -1,11 +1,17 @@
 "use client";
+import gsap from "gsap";
+import { ScrollToPlugin, ScrollTrigger } from "gsap/all";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+
+gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 
 const SmoothLayout = ({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) => {
+  const pathname = usePathname();
   const [isDesktop, setIsDesktop] = useState(false);
 
   useEffect(() => {
@@ -20,6 +26,10 @@ const SmoothLayout = ({
       window.removeEventListener("change", handleResize);
     };
   }, []);
+
+  useEffect(() => {
+    ScrollTrigger.refresh();
+  }, [pathname]);
 
   useEffect(() => {
     if (isDesktop) {

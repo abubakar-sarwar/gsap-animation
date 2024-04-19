@@ -2,16 +2,13 @@
 
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { ScrollToPlugin, ScrollTrigger } from "gsap/all";
-import { MouseEventHandler, useRef } from "react";
+import { useRef } from "react";
 
 const Steps = () => {
   const container = useRef<HTMLDivElement | null>(null);
 
   useGSAP(
     (context: any, contextSafe: any) => {
-      gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
-
       const onClickGood = contextSafe((e: MouseEvent) => {
         document.querySelectorAll(".circle_mouse").forEach((item) => {
           const rect = item.getBoundingClientRect();
