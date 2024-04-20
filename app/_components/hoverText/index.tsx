@@ -16,7 +16,7 @@ const HoverText = ({
   onClick?: () => void;
 }) => {
   return (
-    <Link {...props} href={href} className={`inline-block group ${className}`}>
+    <Link {...props} href={href} className={`inline-flex group ${className}`}>
       <span className="block relative overflow-hidden">
         <span className={`block t-lh-1 ${mainTextClass}`}>{children}</span>
         <span className={`block t-lh-1--text ${hoverClass}`}>{children}</span>
