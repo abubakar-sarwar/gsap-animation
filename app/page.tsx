@@ -13,7 +13,7 @@ export default function Home() {
         <AboutSection />
         <LetsJourney />
         <Embark />
-        {/* <Steps /> */}
+        <Steps />
         <Faqs />
       </div>
     </div>
