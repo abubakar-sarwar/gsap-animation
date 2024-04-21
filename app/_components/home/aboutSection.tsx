@@ -98,11 +98,11 @@ const AboutSection = () => {
             </span>
           ))}
           <Image
-            src="/banner_06.jpg"
+            src="/about_02.jpg"
             alt="wild"
             width={100}
             height={71}
-            className="aspect-video h-[71px] -mt-[3px] w-auto object-cover char about_text_media"
+            className="aspect-video h-[71px] -mt-[3px] w-auto char about_text_media"
           />
           <span className="about_text">
             {"WILD".split("")?.map((text, index) => (

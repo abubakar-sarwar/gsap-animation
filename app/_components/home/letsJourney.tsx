@@ -149,7 +149,7 @@ const LetsJourney = () => {
           <div className="history_grid-item item_toBottom -translate-y-[5%]">
             <div className="relative w-[80%] aspect-square overflow-hidden">
               <Image
-                src="/about_sec.jpg"
+                src="/journy_01.jpg"
                 alt="wild"
                 width={100}
                 height={71}
@@ -176,7 +176,7 @@ const LetsJourney = () => {
           <div className="history_grid-item item_toTop translate-y-[10%]">
             <div className="relative w-[80%] aspect-square overflow-hidden">
               <Image
-                src="/about_sec.jpg"
+                src="/journy_02.jpg"
                 alt="wild"
                 width={100}
                 height={71}
@@ -203,7 +203,7 @@ const LetsJourney = () => {
           <div className="history_grid-item item_toTop translate-y-[10%]">
             <div className="relative w-[80%] aspect-square overflow-hidden">
               <Image
-                src="/about_sec.jpg"
+                src="/journy_03.jpg"
                 alt="wild"
                 width={100}
                 height={71}
@@ -228,7 +228,7 @@ const LetsJourney = () => {
           <div className="history_grid-item item_toBottom -translate-y-[10%]">
             <div className="relative w-[80%] aspect-square overflow-hidden">
               <Image
-                src="/about_sec.jpg"
+                src="/journy_04.jpg"
                 alt="wild"
                 width={100}
                 height={71}

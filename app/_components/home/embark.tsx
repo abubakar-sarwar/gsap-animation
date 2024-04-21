@@ -60,12 +60,19 @@ const Embark = () => {
   );
 
   const images = [
-    "/banner_01.jpg",
-    "/banner_02.jpg",
-    "/banner_03.jpg",
-    "/banner_04.jpg",
-    "/banner_05.jpg",
-    "/banner_06.jpg",
+    "/embark_01.jpg",
+    "/embark_02.jpg",
+    "/embark_03.jpg",
+    "/embark_04.jpg",
+    "/embark_05.jpg",
+  ];
+
+  const images2 = [
+    "/embark_02.jpg",
+    "/embark_06.jpg",
+    "/embark_07.jpg",
+    "/embark_08.jpg",
+    "/embark_09.jpg",
   ];
 
   return (
@@ -94,7 +101,7 @@ const Embark = () => {
               data-to-pos="-30vw"
               className="flex space-x-3 embark_row"
             >
-              {images?.map((item, index) => (
+              {images2?.map((item, index) => (
                 <Image
                   src={item}
                   key={index}

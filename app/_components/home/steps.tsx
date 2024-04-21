@@ -153,7 +153,7 @@ const Steps = () => {
                 Give yourself the gift of anywhere
               </h1>
             </div>
-            <div className="flex items-center all_steps">
+            <div className="flex items-center all_steps xl:mt-10">
               <div className="relative step">
                 <div className="h-[20px] w-[2px] bg-white mr-5" />
                 <div className="absolute -bottom-5 left-10 border-b w-[74px] transform_cus"></div>
