@@ -92,6 +92,7 @@ const Embark = () => {
                   alt="image"
                   width={100}
                   height={100}
+                  unoptimized
                   className="w-[25%] shrink-0 h-auto aspect-video object-cover"
                 />
               ))}
@@ -108,6 +109,7 @@ const Embark = () => {
                   alt="image"
                   width={100}
                   height={100}
+                  unoptimized
                   className="w-[25%] shrink-0 h-auto aspect-video object-cover"
                 />
               ))}
