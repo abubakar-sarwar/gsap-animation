@@ -209,7 +209,7 @@ h1 {
   width: 14.58%;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 720px) {
   .banner_card--1 {
     width: 23.48%;
   }
