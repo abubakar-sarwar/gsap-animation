@@ -75,15 +75,6 @@ const Navbar = () => {
               className="capitalize"
               mainTextClass="opacity-50"
             >
-              About ThrillQuest
-            </HoverText>
-          </li>
-          <li>
-            <HoverText
-              href="/"
-              className="capitalize"
-              mainTextClass="opacity-50"
-            >
               Journey
             </HoverText>
           </li>

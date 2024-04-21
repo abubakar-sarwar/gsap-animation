@@ -108,7 +108,7 @@ const PrivacyPolicyPage = () => {
             </HoverText>{" "}
             (“
             <HoverText
-              href="https://thrillquest.vercel.app/"
+              href="https://thrillquest.vercel.app/privacy-policy"
               className="text-white"
               hoverClass="text-white underline"
             >
@@ -161,46 +161,65 @@ const PrivacyPolicyPage = () => {
           </p>
           <h2 className="trqplcHL">4. Who May Use the Services?</h2>
           <p>
-            You may use the Services only if you are at least 13 years of age
-            (or such other minimum age at which you can provide consent to data
-            processing under the laws of your territory), and not otherwise
-            barred from using the Services under applicable law. If you are over
-            13 years of age but under the age of majority in your respective
-            jurisdiction, you hereby represent and warrant that your parent or
-            legal guardian has read these Terms and accepts them on your behalf.
-            Parents and legal guardians are responsible for the acts of their
-            minor children when using the Services, whether or not the parent or
-            guardian has authorized such acts.
+            To ensure compliance with legal requirements and to guarantee the
+            safety of younger travelers, Wild Travel Agency stipulates the
+            following terms for the use of its services:
           </p>
-          {/* <h2 className="trqplcHL">5. SECURITY OF YOUR INFORMATION</h2>
-          <p>
-            We are committed to protecting the security of your personal
-            information and employ various measures to safeguard it. For details
-            on our security practices, please refer to our full Privacy Notice.
+          <p className="mt-5">
+            You are eligible to utilize our services if you are at least 13
+            years old, provided that this age meets the minimum age requirement
+            for consent to data processing under the laws of your jurisdiction.
+            However, if you are under the legal age of majority in your region,
+            you must have the endorsement of a parent or legal guardian who
+            agrees to these terms on your behalf.
           </p>
-          <h2 className="trqplcHL">6. RETENTION OF PERSONAL INFORMATION</h2>
-          <p>
-            We retain your personal information for as long as necessary to
-            fulfill the purposes outlined in this Privacy Notice unless a longer
-            retention period is required or permitted by law. For details on our
-            retention practices, please refer to our full Privacy Notice.
+          <p className="mt-5">
+            For travelers under the age of 18, it is mandatory to be accompanied
+            by a parent or legal guardian throughout the journey. Parents and
+            legal guardians are responsible for supervising their minor children
+            and will be held accountable for their actions during the use of our
+            services. This policy helps ensure that all adventures with Wild
+            Travel Agency are safe and enjoyable for everyone.
           </p>
-          <h2 className="trqplcHL">7. CONTACT US</h2>
+          <h2 className="trqplcHL">5. Feedback</h2>
           <p>
-            If you have any questions about our privacy practices or this
-            Privacy Notice, or to exercise your rights as detailed in this
-            Privacy Notice, please contact us at:
-          </p> */}
-          <p className="mt-10">ThrillQuest</p>
-          <p>123 North XYZ St</p>
-          <HoverText
-            href="https://thrillquest.vercel.app/"
-            className="text-white"
-            hoverClass="text-white underline"
-          >
-            123@thrillquest.vercel.app
-          </HoverText>
-          <p>(+92) 300-000000</p>
+            We appreciate feedback, comments, ideas, proposals, and suggestions
+            for improvements to the Services (“Feedback”). If you choose to
+            submit Feedback, you agree that we are free to use it without any
+            restriction or compensation to you.
+          </p>
+          <h2 className="trqplcHL">
+            6. Links to Third Party Websites or Resources
+          </h2>
+          <p>
+            The Services may allow you to access third-party websites or other
+            resources. We provide access only as a convenience and are not
+            responsible for the content, products or services on or available
+            from those resources or links displayed on such websites. You
+            acknowledge sole responsibility for and assume all risk arising
+            from, your use of any third-party resources.
+          </p>
+          <h2 className="trqplcHL">7. DMCA/Copyright Policy.</h2>
+          <p>
+            Thrillquest respects copyright law and expects its users to do the
+            same. It is Thrillquest’s policy to terminate in appropriate
+            circumstances account holders who repeatedly infringe or are
+            believed to be repeatedly infringing the rights of copyright
+            holders. Please see Thrillquest’s Copyright and IP Policy for
+            further information.
+          </p>
+          <h2 className="trqplcHL">8. Contact Information</h2>
+          <p>
+            If you have any questions about these Terms or the Services, please
+            contact Thrillquest at{" "}
+            <HoverText
+              href="/"
+              className="text-white"
+              hoverClass="text-white underline"
+            >
+              123@thrillquest.vercel.app
+            </HoverText>
+          </p>
         </div>
       </div>
     </div>

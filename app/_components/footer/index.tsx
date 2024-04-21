@@ -64,17 +64,26 @@ const Footer = () => {
                       </HoverText>
                     </li>
                     <li>
-                      <HoverText href="/" mainTextClass="opacity-40">
+                      <HoverText
+                        href="/privacy-policy"
+                        mainTextClass="opacity-40"
+                      >
                         Privacy Policy
                       </HoverText>
                     </li>
                     <li>
-                      <HoverText href="/" mainTextClass="opacity-40">
+                      <HoverText
+                        href="/terms-conditions"
+                        mainTextClass="opacity-40"
+                      >
                         Terms & Conditions
                       </HoverText>
                     </li>
                     <li>
-                      <HoverText href="/" mainTextClass="opacity-40">
+                      <HoverText
+                        href="/privacy-policy"
+                        mainTextClass="opacity-40"
+                      >
                         Cookie Policy
                       </HoverText>
                     </li>
