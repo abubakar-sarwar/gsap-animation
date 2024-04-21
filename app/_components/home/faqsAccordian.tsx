@@ -21,7 +21,7 @@ const FaqsAccordian = ({ data, openId, setOpenId }: any) => {
   return (
     <div
       onClick={handleSetHeight}
-      className="relative select-none grid grid-cols-1 md:grid-cols-2 gap-10 py-20 border-b-2 cursor-pointer border-white group"
+      className="relative select-none grid grid-cols-1 md:grid-cols-2 gap-10 py-5 sm:py-20 border-b-2 cursor-pointer border-white group"
     >
       <p className="duration-150 faq_question group-hover:text-primary">
         {data?.question}

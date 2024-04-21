@@ -209,6 +209,36 @@ h1 {
   width: 14.58%;
 }
 
+@media (max-width: 375px) {
+  .banner_card--1 {
+    width: 23.48%;
+  }
+  .banner_card--2 {
+    width: 27.08%;
+  }
+  .banner_card--3 {
+    width: 24.58%;
+  }
+  .banner_card--4 {
+    width: 21.97%;
+  }
+  .banner_card--5 {
+    width: 24.58%;
+  }
+  .banner_card--6 {
+    width: 25.26%;
+  }
+  .banner_card--7 {
+    width: 23.43%;
+  }
+  .banner_card--8 {
+    width: 24.58%;
+  }
+  .banner_card--9 {
+    width: 14.58%;
+  }
+}
+
 .banner_card img {
   aspect-ratio: 9/13;
   object-fit: cover;

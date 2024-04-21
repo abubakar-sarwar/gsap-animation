@@ -180,7 +180,7 @@ const Steps = () => {
                   </div>
                 </div>
               </div>
-              <div className="line w-[50%] shrink-0"></div>
+              <div className="line w-[75%] sm:w-[50%] shrink-0"></div>
               <div className="relative step">
                 <div className="h-[20px] w-[2px] bg-white mx-5" />
                 <div className="absolute -bottom-5 left-10 border-b w-[74px] transform_cus"></div>
@@ -204,7 +204,7 @@ const Steps = () => {
                   </div>
                 </div>
               </div>
-              <div className="line w-[50%] shrink-0"></div>
+              <div className="line w-[75%] sm:w-[50%] shrink-0"></div>
               <div className="relative step">
                 <div className="h-[20px] w-[2px] bg-white mx-5" />
                 <div className="absolute -bottom-5 left-10 border-b w-[74px] transform_cus"></div>
@@ -221,7 +221,7 @@ const Steps = () => {
                   </div>
                 </div>
               </div>
-              <div className="line w-[50%] shrink-0"></div>
+              <div className="line w-[75%] sm:w-[50%] shrink-0"></div>
               <div className="relative step">
                 <div className="size-[20px] rounded-full bg-white mx-5" />
                 <div className="absolute top-0 left-0 translate-y-[40px]">
